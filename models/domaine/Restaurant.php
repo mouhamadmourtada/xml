@@ -42,7 +42,6 @@ class Restaurant extends Model{
 
 
     public static function all(){
-        // $dao = new RestaurantDao();
         return RestaurantDao::all();
     }
 
@@ -51,14 +50,16 @@ class Restaurant extends Model{
     }
 
     public function save(){
+        $this->dao->save($this);
 
     }
 
     public function update(){
-
+        $this->dao->update($this);
     }
 
     public function delete(){
+        $this->dao->delete($this);
 
     }
        

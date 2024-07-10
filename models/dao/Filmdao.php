@@ -4,18 +4,18 @@ namespace models\dao;
 
 use models\domaine\Film;
 use models\dao\ModelDao;
-class Filmdao extends ModelDao{
+class FilmDao extends ModelDao{
 
     
 
     public function __construct(){
     }
 
-    public function save(){
+    public function save($film){
         
     }
 
-    public function delete(){
+    public function delete($film){
         
     }
 
@@ -28,7 +28,7 @@ class Filmdao extends ModelDao{
         
     }
 
-    public function update(){
+    public function update($film){
         
     }
 }
