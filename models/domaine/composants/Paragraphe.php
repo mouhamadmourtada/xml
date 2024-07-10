@@ -1,10 +1,18 @@
 <?php
 
-namespace Models\Domaine\ElementRestaurant;
+namespace Models\Domaine\composants;
 
 class Paragraphe {
 
     private $content; 
+    // $content[] = ["chaine", "chaine", "chaine"]
+    // $content[] = ["image", $image]
+
+    // $content = [
+    //     ["chaine", "chaine"],
+    //     ["image", $image]
+    // ]    ["important", ""]
+    // ]
     
     public function __construct($content) {
         $this->content = $content;

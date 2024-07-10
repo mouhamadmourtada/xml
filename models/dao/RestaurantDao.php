@@ -4,7 +4,7 @@ namespace Models\Dao;
 
 use models\dao\ModelDao;
 use Models\Domaine\Restaurant;
-use Models\Domaine\ElementRestaurant\Coordonnee;
+use Models\Domaine\composants\Coordonnee;
 use SimpleXMLElement;
 
 class RestaurantDao extends ModelDao {

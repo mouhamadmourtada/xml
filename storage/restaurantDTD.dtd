@@ -15,7 +15,7 @@
 <!ELEMENT carte (plat*)>
 <!ELEMENT plat (  prix, descriptionPlat?)>
 <!ATTLIST plat type (dessert|entree|plat|fromage) #REQUIRED>
-<!ATTLIST plat plat_id (ID) #REQUIRED>
+<!ATTLIST plat plat_id ID #REQUIRED>
 <!ELEMENT prix EMPTY>
 <!ATTLIST prix devise CDATA #REQUIRED montant CDATA #REQUIRED>
 <!ELEMENT descriptionPlat (paragraphe)>
@@ -24,6 +24,6 @@
 <!ELEMENT menu (titre, descriptionMenu, prix, elements)>
 <!ELEMENT titre (#PCDATA)>
 <!ELEMENT descriptionMenu (paragraphe*)>
-<!ELEMENT elements (platref+)>
+<!ELEMENT elements (platRef+)>
 <!ELEMENT platRef  EMPTY>
 <!ATTLIST platRef plat_id IDREF #REQUIRED>

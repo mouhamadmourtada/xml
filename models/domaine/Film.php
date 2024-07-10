@@ -3,6 +3,8 @@
 namespace models\domaine;
 
 use models\dao\FilmDao;
+use Models\Domaine\composants\notePresse;
+use Models\Domaine\composants\noteSpectateur;
 
 class Film extends Model{
     private $titre;
@@ -10,6 +12,15 @@ class Film extends Model{
     private $duree;
     private $realisateur;
     private $genre;
+
+    private $acteurs;
+    private $langue;
+    private $synopsis;
+    private NotePresse $notePresse;
+    private NoteSpectateur $noteSpectateur;
+
+    private $horaires;
+
 
     private FilmDao $dao;
     
@@ -20,6 +31,7 @@ class Film extends Model{
         $this->duree = $duree;
         $this->realisateur = $realisateur;
         $this->genre = $genre;
+        
         $this->dao = new FilmDao();
     }
     
@@ -62,6 +74,68 @@ class Film extends Model{
     public function setGenre($genre){
         $this->genre = $genre;
     }
+
+    public function getActeurs(){
+        return $this->acteurs;
+    }
+
+    public function setActeurs($acteurs){
+        $this->acteurs = $acteurs;
+    }
+
+    public function addActeurs($acteur){
+        $this->acteurs[] = $acteur;
+    }
+
+    public function removeActeurs($acteur){
+        $key = array_search($acteur, $this->acteurs);
+        if($key !== false){
+            unset($this->acteurs[$key]);
+        }
+    }
+
+
+    public function getLangue(){
+        return $this->langue;
+    }
+
+    public function setLangue($langue){
+        $this->langue = $langue;
+    }
+
+    public function getSynopsis(){
+        return $this->synopsis;
+    }
+
+    public function setSynopsis($synopsis){
+        $this->synopsis = $synopsis;
+    }
+
+    public function getNotePresse(){
+        return $this->notePresse;
+    }
+
+    public function setNotePresse($notePresse){
+        $this->notePresse = $notePresse;
+    }
+
+    public function getNoteSpectateur(){
+        return $this->noteSpectateur;
+    }
+
+    public function setNoteSpectateur($noteSpectateur){
+        $this->noteSpectateur = $noteSpectateur;
+    }
+
+    public function getHoraires(){
+        return $this->horaires;
+    }
+
+    public function setHoraires($horaires){
+        $this->horaires = $horaires;
+    }
+
+
 
 
     public function save(){

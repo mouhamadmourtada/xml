@@ -1,6 +1,6 @@
 <?php
 
-namespace Models\Domaine\ElementRestaurant;
+namespace Models\Domaine\composants;
 
 class Important {
     

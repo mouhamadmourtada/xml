@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE restaurants SYSTEM "restaurantDTD.dtd">
-
-
+<!DOCTYPE restaurants SYSTEM "./restaurantDTD.dtd">
 <restaurants>
     <restaurant>
         <coordonnees>
@@ -10,47 +8,65 @@
             <restaurateur>Mr Dupont</restaurateur>
         </coordonnees>
         <descriptionRestaurant>
-            <p>Le petit resto est un restaurant familial</p>
-            <img url="http://www.lepetitresto.com/logo.jpg" placement="center"/>
+            <paragraphe>
+                Le petit resto est un restaurant familial
+                <image url="http://www.lepetitresto.com/logo.jpg" position="centre"/>
+            </paragraphe>
         </descriptionRestaurant>
         <carte>
-            <plat identifiant="plat_1" partie="entree">
-                <prix montant="5000" devise="XOF"/>
-                <descriptionPlat>Salade de tomates</descriptionPlat>
+            <plat plat_id="plat_1" type="entree">
+                <prix devise="XOF" montant="5000"/>
+                <descriptionPlat>
+                    <paragraphe>Salade de tomates</paragraphe>
+                </descriptionPlat>
             </plat>
-            <plat identifiant="plat_2" partie="entree">
-                <prix montant="6000" devise="XOF"/>
-                <descriptionPlat>Salade de carottes</descriptionPlat>
+            <plat plat_id="plat_2" type="entree">
+                <prix devise="XOF" montant="6000"/>
+                <descriptionPlat>
+                    <paragraphe>Salade de carottes</paragraphe>
+                </descriptionPlat>
             </plat>
-            <plat identifiant="plat_3" partie="plat">
-                <prix montant="10000" devise="XOF"/>
-                <descriptionPlat>Poulet roti</descriptionPlat>
+            <plat plat_id="plat_3" type="plat">
+                <prix devise="XOF" montant="10000"/>
+                <descriptionPlat>
+                    <paragraphe>Poulet roti</paragraphe>
+                </descriptionPlat>
             </plat>
-            <plat identifiant="plat_4" partie="plat">
-                <prix montant="12000" devise="XOF"/>
-                <descriptionPlat>Boeuf bourguignon</descriptionPlat>
+            <plat plat_id="plat_4" type="plat">
+                <prix devise="XOF" montant="12000"/>
+                <descriptionPlat>
+                    <paragraphe>Boeuf bourguignon</paragraphe>
+                </descriptionPlat>
             </plat>
-            <plat identifiant="plat_5" partie="dessert">
-                <prix montant="3000" devise="XOF"/>
-                <descriptionPlat>Salade de fruits</descriptionPlat>
+            <plat plat_id="plat_5" type="dessert">
+                <prix devise="XOF" montant="3000"/>
+                <descriptionPlat>
+                    <paragraphe>Salade de fruits</paragraphe>
+                </descriptionPlat>
             </plat>
         </carte>
         <menus>
             <menu>
                 <titre>Menu du jour</titre>
-                <description>Menu complet</description>
+                <descriptionMenu>
+                    <paragraphe>Menu complet</paragraphe>
+                </descriptionMenu>
+                <prix devise="XOF" montant="15000"/>
                 <elements>
-                    <elementMenu idref="plat_1"/>
-                    <elementMenu idref="plat_3"/>
-                    <elementMenu idref="plat_5"/>
+                    <platRef plat_id="plat_1"/>
+                    <platRef plat_id="plat_3"/>
+                    <platRef plat_id="plat_5"/>
                 </elements>
             </menu>
             <menu>
                 <titre>Menu enfant</titre>
-                <description>Menu pour les enfants</description>
+                <descriptionMenu>
+                    <paragraphe>Menu pour les enfants</paragraphe>
+                </descriptionMenu>
+                <prix devise="XOF" montant="10000"/>
                 <elements>
-                    <elementMenu idref="plat_1"/>
-                    <elementMenu idref="plat_5"/>
+                    <platRef plat_id="plat_1"/>
+                    <platRef plat_id="plat_5"/>
                 </elements>
             </menu>
         </menus>

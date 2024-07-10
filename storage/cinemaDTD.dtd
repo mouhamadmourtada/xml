@@ -17,6 +17,6 @@
 <!ATTLIST noteSpectateur base CDATA #REQUIRED>
 <!ELEMENT horaires (horaire+)>
 <!ELEMENT horaire (jour+, heure+)>
-<!ELEMENT jour (EMPTY)>
+<!ELEMENT jour EMPTY>
 <!ATTLIST jour valeur (LUNDI|MARDI|MERCREDI|JEUDI|VENDREDI|SAMEDI|DIMANCHE) #REQUIRED>
 <!ELEMENT heure (#PCDATA)>

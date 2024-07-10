@@ -2,12 +2,12 @@
 
 namespace Models\Domaine;
 
-use Models\Domaine\ElementRestaurant\Coordonnee;
+use Models\Domaine\composants\Coordonnee;
 use models\domaine\Model;
-use models\domaine\elementRestaurant\DescriptionRestaurant;
-use models\domaine\elementRestaurant\Menu;
-use models\domaine\elementRestaurant\Plat;
-use models\domaine\elementRestaurant\Paragraphe;
+use models\domaine\composants\DescriptionRestaurant;
+use models\domaine\composants\Menu;
+use models\domaine\composants\Plat;
+use models\domaine\composants\Paragraphe;
 use models\dao\RestaurantDao;
 
 class Restaurant extends Model{
@@ -17,8 +17,7 @@ class Restaurant extends Model{
   
 
     private Coordonnee $coordonnees;
-    /** @var Paragraphe[] $descriptionRestaurant */
-    
+    /** @var Paragraphe[] $descriptionRestaurant */    
     private $descriptionRestaurant;
 
     /** @var Plat[] $cartes */
