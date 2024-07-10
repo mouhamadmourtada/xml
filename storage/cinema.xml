@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE cinema SYSTEM "cinemaDTD.dtd">
+<cinema>
+	<film>
+		<titre>Les Brigades du Tigre</titre>
+		<duree>120</duree>
+		<genre>Comédie</genre>
+		<realisateur>Jean-Pierre Melville</realisateur>
+		<acteurs>
+			<acteur>Amélie Poulain</acteur>
+			<acteur>Jean-Pierre Melville</acteur>
+			<acteur>Michel Bouquet</acteur>
+			<acteur>Jean-Pierre Darroussin</acteur>
+		</acteurs>
+		<annee>1962</annee>
+		<langue>Français</langue>
+        <notes>
+            <presse>
+                3/5
+            </presse>
+            <spectateur>
+                4/5
+            </spectateur>
+        </notes>
+
+		<description>Amélie Poulain, une actrice de la comédie française, est un jour à la recherche d'un nouveau rôle. Mais elle est déjà occupée à la tâche de la part de l'agente du service de police, qui doit déterminer la mort de son client, un homme de lettres.</description>
+		<horaires>
+			<jour nom="Lundi">
+				<horaire>14h00</horaire>
+				<horaire>16h40</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+			<jour nom="Jeudi">
+				<horaire>14h00</horaire>
+				<horaire>19h40</horaire>
+				<horaire>22h10</horaire>
+            </jour>
+			<jour nom="Vendredi">
+				<horaire>10h20</horaire>
+				<horaire>14h00</horaire>
+				<horaire>16h40</horaire>
+				<horaire>20h20</horaire>
+            </jour>
+            <jour nom="Samedi">
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+        </horaires>
+    </film>
+
+    <film>
+        <titre>Les 8 salopards</titre>
+        <duree>120</duree>
+        <genre>Comédie</genre>
+        <realisateur>Quentin Tarantino</realisateur>
+        <acteurs>
+            <acteur>Samuel L. Jackson</acteur>
+            <acteur>Quentin Tarantino</acteur>
+            <acteur>Michael Madsen</acteur>
+            <acteur>Tim Roth</acteur>
+        </acteurs>
+        <annee>2015</annee>
+        <langue>Anglais</langue>
+        <notes>
+            <presse>
+                4/5
+            </presse>
+            <spectateur>
+                5/5
+            </spectateur>
+        </notes>
+
+        <description>Les 8 salopards, une bande de hors-la-loi, se retrouvent coincés dans un refuge de montagne à cause d'une tempête de neige. Ils se rendent compte qu'ils ne pourront pas tous survivre à cette situation.</description>
+        <horaires>
+            <jour nom="Lundi">
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+            <jour nom="Jeudi">
+                <horaire>14h00</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+            <jour nom="Vendredi">
+                <horaire>10h20</horaire>
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>20h20</horaire>
+            </jour>
+            <jour nom="Samedi">
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+        </horaires>
+    </film>
+
+    <film>
+        <titre>Django Unchained</titre>
+        <duree>120</duree>
+        <genre>Comédie</genre>
+        <realisateur>Quentin Tarantino</realisateur>
+        <acteurs>
+            <acteur>Samuel L. Jackson</acteur>
+            <acteur>Quentin Tarantino</acteur>
+            <acteur>Michael Madsen</acteur>
+            <acteur>Tim Roth</acteur>
+        </acteurs>
+        <annee>2012</annee>
+        <langue>Anglais</langue>
+        <notes>
+            <presse>
+                4/5
+            </presse>
+            <spectateur>
+                5/5
+            </spectateur>
+        </notes>
+
+        <description>Django Unchained, un esclave noir, est libéré par un chasseur de primes allemand. Ensemble, ils partent à la recherche de la femme de Django, qui a été vendue à un propriétaire de plantation.</description>
+        <horaires>
+            <jour nom="Lundi">
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+            <jour nom="Jeudi">
+                <horaire>14h00</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+            <jour nom="Vendredi">
+                <horaire>10h20</horaire>
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>20h20</horaire>
+            </jour>
+            <jour nom="Samedi">
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+        </horaires>
+    </film>
+
+    <film>
+        <titre>Titanic</titre>
+        <duree>120</duree>
+        <genre>Comédie</genre>
+        <realisateur>James Cameron</realisateur>
+        <acteurs>
+            <acteur>Leonardo DiCaprio</acteur>
+            <acteur>Kate Winslet</acteur>
+            <acteur>Billy Zane</acteur>
+            <acteur>Kathy Bates</acteur>
+        </acteurs>
+        <annee>1997</annee>
+        <langue>Anglais</langue>
+        <notes>
+            <presse>
+                4/5
+            </presse>
+            <spectateur>
+                5/5
+            </spectateur>
+        </notes>
+
+        <description>Le Titanic, un paquebot de luxe, coule après avoir heurté un iceberg. Jack et Rose, deux passagers de première classe, tombent amoureux l'un de l'autre et tentent de survivre à la catastrophe.</description>
+        <horaires>
+            <jour nom="Lundi">
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+            <jour nom="Jeudi">
+                <horaire>14h00</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+            <jour nom="Vendredi">
+                <horaire>10h20</horaire>
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>20h20</horaire>
+            </jour>
+            <jour nom="Samedi">
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+        </horaires>
+    </film>
+
+    <film>
+        <titre>Avengers</titre>
+        <duree>120</duree>
+        <genre>Comédie</genre>
+        <realisateur>Joss Whedon</realisateur>
+        <acteurs>
+            <acteur>Robert Downey Jr.</acteur>
+            <acteur>Chris Evans</acteur>
+            <acteur>Mark Ruffalo</acteur>
+            <acteur>Chris Hemsworth</acteur>
+        </acteurs>
+        <annee>2012</annee>
+        <langue>Anglais</langue>
+        <notes>
+            <presse>
+                4/5
+            </presse>
+            <spectateur>
+                5/5
+            </spectateur>
+        </notes>
+
+        <description>Les Avengers, une équipe de super-héros, se réunissent pour combattre Loki, un dieu maléfique qui menace de détruire la Terre. Ils doivent unir leurs forces pour sauver l'humanité.</description>
+        <horaires>
+            <jour nom="Lundi">
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+            <jour nom="Jeudi">
+                <horaire>14h00</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+            <jour nom="Vendredi">
+                <horaire>10h20</horaire>
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>20h20</horaire>
+            </jour>
+            <jour nom="Samedi">
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+        </horaires>
+    </film>
+
+    <film>
+        <titre>Fight Club</titre>
+        <duree>120</duree>
+        <genre>Comédie</genre>
+        <realisateur>David Fincher</realisateur>
+        <acteurs>
+            <acteur>Brad Pitt</acteur>
+            <acteur>Edward Norton</acteur>
+            <acteur>Helena Bonham Carter</acteur>
+            <acteur>Meat Loaf</acteur>
+        </acteurs>
+        <annee>1999</annee>
+        <langue>Anglais</langue>
+        <notes>
+            <presse>
+                4/5
+            </presse>
+            <spectateur>
+                5/5
+            </spectateur>
+        </notes>
+
+        <description>Un homme déprimé rencontre un vendeur de savon charismatique et rebelle. Ensemble, ils créent un club de combat secret où les hommes peuvent se battre pour se sentir vivants.</description>
+        <horaires>
+            <jour nom="Lundi">
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+            <jour nom="Jeudi">
+                <horaire>14h00</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+            <jour nom="Vendredi">
+                <horaire>10h20</horaire>
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>20h20</horaire>
+            </jour>
+            <jour nom="Samedi">
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+        </horaires>
+    </film>
+
+    <film>
+        <titre> Old boy</titre>
+        <duree>120</duree>
+        <genre>Comédie</genre>
+        <realisateur>Chan-wook Park</realisateur>
+        <acteurs>
+            <acteur>Min-sik Choi</acteur>
+            <acteur>Ji-tae Yu</acteur>
+            <acteur>Hye-jeong Kang</acteur>
+            <acteur>Dae-han Ji</acteur>
+        </acteurs>
+        <annee>2003</annee>
+        <langue>Coréen</langue>
+        <notes>
+            <presse>
+                4/5
+            </presse>
+            <spectateur>
+                5/5
+            </spectateur>
+        </notes>
+        <description>Un homme est kidnappé et emprisonné pendant 15 ans sans raison apparente. Lorsqu'il est libéré, il se lance dans une quête de vengeance pour découvrir la vérité sur son enlèvement.</description>
+        <horaires>
+            <jour nom="Lundi">
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+            <jour nom="Jeudi">
+                <horaire>14h00</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+            <jour nom="Vendredi">
+                <horaire>10h20</horaire>
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>20h20</horaire>
+            </jour>
+            <jour nom="Samedi">
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+        </horaires>
+    </film>
+
+    <film>
+        <titre>John Wick</titre>
+        <duree>120</duree>
+        <genre>Comédie</genre>
+        <realisateur>Chad Stahelski</realisateur>
+        <acteurs>
+            <acteur>Keanu Reeves</acteur>
+            <acteur>Michael Nyqvist</acteur>
+            <acteur>Alfie Allen</acteur>
+            <acteur>Adrianne Palicki</acteur>
+        </acteurs>
+        <annee>2014</annee>
+        <langue>Anglais</langue>
+        <notes>
+            <presse>
+                4/5
+            </presse>
+            <spectateur>
+                5/5
+            </spectateur>
+        </notes>
+        <description>John Wick, un ancien tueur à gages, se lance dans une mission de vengeance après que des gangsters aient tué son chien. Il est prêt à tout pour retrouver les coupables et les éliminer.</description>
+        <horaires>
+            <jour nom="Lundi">
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+            <jour nom="Jeudi">
+                <horaire>14h00</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+            <jour nom="Vendredi">
+                <horaire>10h20</horaire>
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>20h20</horaire>
+            </jour>
+            <jour nom="Samedi">
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+        </horaires>
+    </film>
+
+    <film>
+        <titre>Avatar</titre>
+        <duree>120</duree>
+        <genre>Comédie</genre>
+        <realisateur>James Cameron</realisateur>
+        <acteurs>
+            <acteur>Sam Worthington</acteur>
+            <acteur>Zoe Saldana</acteur>
+            <acteur>Sigourney Weaver</acteur>
+            <acteur>Stephen Lang</acteur>
+        </acteurs>
+        <annee>2009</annee>
+        <langue>Anglais</langue>
+        <notes>
+            <presse>
+                4/5
+            </presse>
+            <spectateur>
+                5/5
+            </spectateur>
+        </notes>
+        <description>Avatar, un soldat paraplégique, est envoyé sur une planète lointaine pour exploiter ses ressources naturelles. Il se retrouve pris au milieu d'un conflit entre les humains et les autochtones.</description>
+        <horaires>
+            <jour nom="Lundi">
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+            <jour nom="Jeudi">
+                <horaire>14h00</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+            <jour nom="Vendredi">
+                <horaire>10h20</horaire>
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>20h20</horaire>
+            </jour>
+            <jour nom="Samedi">
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+        </horaires>
+    </film>
+
+    <film>
+        <titre>Dune</titre>
+        <duree>120</duree>
+        <genre>Comédie</genre>
+        <realisateur>Denis Villeneuve</realisateur>
+        <acteurs>
+            <acteur>Timothée Chalamet</acteur>
+            <acteur>Rebecca Ferguson</acteur>
+            <acteur>Oscar Isaac</acteur>
+            <acteur>Josh Brolin</acteur>
+        </acteurs>
+        <annee>2021</annee>
+        <langue>Anglais</langue>
+        <notes>
+            <presse>
+                4/5
+            </presse>
+            <spectateur>
+                5/5
+            </spectateur>
+        </notes>
+        <description>Dune, un jeune prince, est envoyé sur une planète désertique pour superviser l'extraction d'une ressource précieuse. Il se retrouve pris au milieu d'un conflit entre les habitants de la planète et les forces impériales.</description>
+        <horaires>
+            <jour nom="Lundi">
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+            <jour nom="Jeudi">
+                <horaire>14h00</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+            <jour nom="Vendredi">
+                <horaire>10h20</horaire>
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>20h20</horaire>
+            </jour>
+            <jour nom="Samedi">
+                <horaire>14h00</horaire>
+                <horaire>16h40</horaire>
+                <horaire>19h40</horaire>
+                <horaire>22h10</horaire>
+            </jour>
+        </horaires>
+    </film>
+
+
+
+</cinema>
+                

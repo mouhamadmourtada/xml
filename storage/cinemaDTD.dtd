@@ -1,0 +1,22 @@
+<!ELEMENT cinema (film+)>
+<!ELEMENT film (titre | genre | duree | realisateur | acteurs | annee | langue | synopsis | notePresse | noteSpectateur | horaires)*>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT genre (#PCDATA)>
+<!ELEMENT duree (#PCDATA)>
+<!ELEMENT realisateur (#PCDATA)>
+<!ELEMENT acteurs (acteur+)>
+<!ELEMENT acteur (#PCDATA)>
+<!ELEMENT annee (#PCDATA)>
+<!ELEMENT langue (#PCDATA)>
+<!ELEMENT synopsis (#PCDATA)>
+<!ELEMENT notePresse (#PCDATA)>
+<!ATTLIST notePresse valeur CDATA #REQUIRED>
+<!ATTLIST notePresse base CDATA #REQUIRED>
+<!ELEMENT noteSpectateur (#PCDATA)>
+<!ATTLIST noteSpectateur valeur CDATA #REQUIRED> 
+<!ATTLIST noteSpectateur base CDATA #REQUIRED>
+<!ELEMENT horaires (horaire+)>
+<!ELEMENT horaire (jour+, heure+)>
+<!ELEMENT jour (EMPTY)>
+<!ATTLIST jour valeur (LUNDI|MARDI|MERCREDI|JEUDI|VENDREDI|SAMEDI|DIMANCHE) #REQUIRED>
+<!ELEMENT heure (#PCDATA)>

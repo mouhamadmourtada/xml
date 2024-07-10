@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE restaurants SYSTEM "restaurantDTD.dtd">
+
+<!-- 
+<!ELEMENT restaurants (restaurant*)>
+<!ELEMENT restaurant (coordonnees, descriptionRestaurant?, carte, menus?)>
+<!ELEMENT coordonnees (nom, adresse, restaurateur)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT adresse (#PCDATA)>
+<!ELEMENT restaurateur (#PCDATA)>
+<!ELEMENT descriptionRestaurant (p|liste|i|img)*>
+<!ELEMENT p (#PCDATA|i)*>
+<!ELEMENT liste (elementListe*)>
+<!ELEMENT elementListe (#PCDATA)>
+<!ELEMENT i (#PCDATA)>
+<!ELEMENT img EMPTY>
+<!ATTLIST img url CDATA #REQUIRED>
+<!ATTLIST img placement (left|right|center) "center">
+<!ELEMENT carte (plat+)>
+<!ELEMENT plat (prix, descriptionPlat?)>
+<!ATTLIST plat identifiant ID #REQUIRED>
+<!ATTLIST plat partie CDATA #REQUIRED>
+<!ELEMENT prix EMPTY>
+<!ATTLIST prix montant CDATA #REQUIRED>
+<!ATTLIST prix devise (XOF|EURO|DOLLAR) #REQUIRED>
+<!ELEMENT descriptionPlat (#PCDATA|i)*>
+<!ELEMENT menus (menu*)>
+<!ELEMENT menu (titre, description?, prix, elements)>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT elements (elementMenu+)>
+<!ELEMENT elementMenu EMPTY>
+<!ATTLIST elementMenu idref IDREF #REQUIRED>
+
+-->
+
+<!-- voici la dtd genere moi 5 restaurant -->
+
+<restaurants>
+    <restaurant>
+        <coordonnees>
+            <nom>Le petit resto</nom>
+            <adresse>12 rue des fleurs</adresse>
+            <restaurateur>Mr Dupont</restaurateur>
+        </coordonnees>
+        <descriptionRestaurant>
+            <p>Le petit resto est un restaurant familial</p>
+            <img url="http://www.lepetitresto.com/logo.jpg" placement="center"/>
+        </descriptionRestaurant>
+        <carte>
+            <plat identifiant="plat_1" partie="entree">
+                <prix montant="5000" devise="XOF"/>
+                <descriptionPlat>Salade de tomates</descriptionPlat>
+            </plat>
+            <plat identifiant="plat_2" partie="entree">
+                <prix montant="6000" devise="XOF"/>
+                <descriptionPlat>Salade de carottes</descriptionPlat>
+            </plat>
+            <plat identifiant="plat_3" partie="plat">
+                <prix montant="10000" devise="XOF"/>
+                <descriptionPlat>Poulet roti</descriptionPlat>
+            </plat>
+            <plat identifiant="plat_4" partie="plat">
+                <prix montant="12000" devise="XOF"/>
+                <descriptionPlat>Boeuf bourguignon</descriptionPlat>
+            </plat>
+            <plat identifiant="plat_5" partie="dessert">
+                <prix montant="3000" devise="XOF"/>
+                <descriptionPlat>Salade de fruits</descriptionPlat>
+            </plat>
+        </carte>
+        <menus>
+            <menu>
+                <titre>Menu du jour</titre>
+                <description>Menu complet</description>
+                <elements>
+                    <elementMenu idref="plat_1"/>
+                    <elementMenu idref="plat_3"/>
+                    <elementMenu idref="plat_5"/>
+                </elements>
+            </menu>
+            <menu>
+                <titre>Menu enfant</titre>
+                <description>Menu pour les enfants</description>
+                <elements>
+                    <elementMenu idref="plat_1"/>
+                    <elementMenu idref="plat_5"/>
+                </elements>
+            </menu>
+        </menus>
+    </restaurant>
+</restaurants>
