@@ -13,14 +13,14 @@ il faudra ajouter ces lignes dans votre fichier de configuration de apache (http
 
 
 # Règle de travail (un algo très simple à appliquer
-evenement déclencheur une tache à faire 
-pull request
-creer une nouvelle branche
-switcher sur la nouvelle branche
-faire ton code 
-commit sur cette nouvelle branche
-push sur cette branche
-faire une merge request sur github
+evenement déclencheur une tache à faire <br/>
+pull request <br/>
+creer une nouvelle branche <br/>
+switcher sur la nouvelle branche <br/>
+faire ton code <br/>
+commit sur cette nouvelle branche <br/>
+push sur cette branche <br/>
+faire une merge request sur github <br/>
 
 
 # Nguir yalla na ngueine mana respecter l'algo, surtout la première étape, deileine pull avant ngueindi créer sen branche et il faut s'assurer que la pull a marché, ta bou kenn push sur main ta bou kenn diema mergeil boppam nous allons designer quelqu'un pour se charger des merge
