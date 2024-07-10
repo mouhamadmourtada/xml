@@ -19,6 +19,7 @@ class FilmController extends Controller {
     public function show($params) {
         $id = $params['id'];
         $film = Film::find($id);
+        var_dump($film); die();
         $this->view('film/show', ['film' => $film]);
     }
 
@@ -27,7 +28,6 @@ class FilmController extends Controller {
     }
 
     public function store() {
-
 
 
         $film = new Film();

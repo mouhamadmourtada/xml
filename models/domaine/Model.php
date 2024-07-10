@@ -4,7 +4,6 @@ namespace models\domaine;
 
 abstract class Model{
     protected $id;
-    protected $table;
     
     public function __construct($id = null){
         $this->id = $id;

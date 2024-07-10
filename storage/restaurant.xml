@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE restaurants SYSTEM "./restaurantDTD.dtd">
 <restaurants>
-    <restaurant>
+    <restaurant id_restaurant="restaurant_1">
         <coordonnees>
             <nom>Le petit resto</nom>
             <adresse>12 rue des fleurs</adresse>

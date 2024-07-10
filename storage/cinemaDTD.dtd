@@ -1,5 +1,6 @@
 <!ELEMENT cinema (film+)>
 <!ELEMENT film (titre | genre | duree | realisateur | acteurs | annee | langue | synopsis | notePresse | noteSpectateur | horaires)*>
+<!ATTLIST film id_film ID #REQUIRED>
 <!ELEMENT titre (#PCDATA)>
 <!ELEMENT genre (#PCDATA)>
 <!ELEMENT duree (#PCDATA)>

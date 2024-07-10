@@ -1,82 +1,85 @@
 <?php
 
 require 'vue/layout/head.php';
-    // var_dump($_SESSION['user_id']);
 ?>    
-index
 
-    <button>
+  
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
         <a href="http://localhost/xml/auth/logout">logout</a>
     </button>
-    <button>
-        <a href="http://localhost/xml/film/create">create</a>
-    </button>
-<!-- 
-    <table>
-        <tr>
-            <th>Titre</th>
-            <th>Annee</th>
-            <th>Duree</th>
-            <th>Realisateur</th>
-            <th>Genre</th>
-            <th>Actions</th>
-        </tr>
-        <?php foreach($films as $film): ?>
-            <tr>
-                <td><?= $film->getTitre() ?></td>
-                <td><?= $film->getAnnee() ?></td>
-                <td><?= $film->getDuree() ?></td>
-                <td><?= $film->getRealisateur() ?></td>
-                <td><?= $film->getGenre() ?></td>
-                <td>
-                    <button>
-                        <a href="http://localhost/xml/film/<?= $film->getId() ?>">show</a>
-                    </button>
-                    <button>
-                        <a href="http://localhost/xml/film/<?= $film->getId() ?>/edit">edit</a>
-                    </button>
-                    <button>
-                        <a href="http://localhost/xml/film/<?= $film->getId() ?>/delete">delete</a>
-                    </button>
-                </td>
-            </tr>
-        <?php endforeach; ?>
-    </table> -->
+    <div class="flex flex-row justify-end mx-5 mt-5">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <a href="http://localhost/xml/film/create">create</a>
+        </button>
+    </div>
 
-    <!-- fais un effort dans le formatage quand même on utilise tailwind -->
-    <div class="flex flex-wrap -mx-1 lg:-mx-4 mt-10">
-        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/2">
-            <article class="overflow-hidden rounded-lg shadow-lg">
-                <a href="#">
-                    <img alt="Placeholder" class="block h-auto w-full" src="https://picsum.photos/600/400/?random">
-                </a>
+    <?= $films[0]->getId() ?>
 
-                <header class="flex items-center justify-between leading-tight p-2 md:p-4">
-                    <h1 class="text-lg">
-                        <a class="no-underline hover:underline text-black" href="#">
-                            <?= $film->getTitre() ?>
-                        </a>
-                    </h1>
-                    <p class="text-grey-darker text-sm">
-                        <?= $film->getAnnee() ?>
-                    </p>
-                </header>
-
-                <footer class="flex items-center justify-between leading-none p-2 md:p-4">
-                    <a class="flex items center no-underline hover:underline text-black" href="#">
-                        <img alt="Placeholder" class="block rounded-full" src="https://picsum.photos/32/32/?random">
-                        <p class="ml-2 text-sm">
-                            <?= $film->getRealisateur() ?>
-                        </p>
-                    </a>
-                    <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
-                        <span class="hidden">Like</span>
-                        <i class="fa fa-heart"></i>
-                    </a>
-                </footer>
-            </article>
+    <div class="flex flex-col mt-5 mx-5">
+        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+                <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Titre
+                                </th>
+                                <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Annee
+                                </th>
+                                <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Duree
+                                </th>
+                                <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Realisateur
+                                </th>
+                                <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Genre
+                                </th>
+                                <th scope="col" class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Actions
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <?php foreach($films as $film): ?>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900"><?= $film->getTitre() ?></div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900"><?= $film->getAnnee() ?></div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900"><?= $film->getDuree() ?></div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900"><?= $film->getRealisateur() ?></div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="text-sm text-gray-900"><?= $film->getGenre() ?></div>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <button>
+                                            <a href="http://localhost/xml/film/show/<?= $film->getId() ?>">show</a>
+                                        </button>
+                                        <button>
+                                            <a href="http://localhost/xml/film/<?= $film->getId() ?>/edit">edit</a>
+                                        </button>
+                                        <button>
+                                            <a href="http://localhost/xml/film/<?= $film->getId() ?>/delete">delete</a>
+                                        </button>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
+
 
 
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>  
 <!DOCTYPE cinema SYSTEM "cinemaDTD.dtd">
 <cinema>
-	<film>
+	<film id_film="film_1">
 		<titre>Les Brigades du Tigre</titre>
 		<duree>120</duree>
 		<genre>Comédie</genre>
@@ -42,7 +42,7 @@
     <!-- les 8 salpartd diango unchained, titanic, avengers, fight club,  old boy, john wick, avatar, dune-->
     
 
-    <film>
+    <film id_film="film_2">
         <titre>Les 8 salopards</titre>
         <duree>120</duree>
         <genre>Comédie</genre>
@@ -76,7 +76,7 @@
         </horaires>
     </film>
 
-    <film>
+    <film id_film="film_3">
         <titre>Django Unchained</titre>
         <duree>120</duree>
         <genre>Comédie</genre>
@@ -110,7 +110,7 @@
         </horaires>
     </film>
 
-    <film>
+    <film id_film="film_4">
         <titre>Titanic</titre>
         <duree>120</duree>
         <genre>Comédie</genre>
@@ -145,7 +145,7 @@
 
     </film>
 
-    <film>
+    <film id_film="film_5">
         <titre>Avengers</titre>
         <duree>120</duree>
         <genre>Comédie</genre>
@@ -179,7 +179,7 @@
         </horaires>
     </film>
 
-    <film>
+    <film id_film="film_6">
         <titre>Fight Club</titre>
         <duree>120</duree>
         <genre>Comédie</genre>

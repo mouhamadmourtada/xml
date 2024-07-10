@@ -7,6 +7,7 @@ use Models\Domaine\composants\notePresse;
 use Models\Domaine\composants\noteSpectateur;
 
 class Film extends Model{
+
     private $titre;
     private $annee;
     private $duree;
@@ -31,7 +32,6 @@ class Film extends Model{
         $this->duree = $duree;
         $this->realisateur = $realisateur;
         $this->genre = $genre;
-        
         $this->dao = new FilmDao();
     }
     

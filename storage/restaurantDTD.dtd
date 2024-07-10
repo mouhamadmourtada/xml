@@ -1,5 +1,6 @@
 <!ELEMENT restaurants (restaurant*)>
 <!ELEMENT restaurant (coordonnees, descriptionRestaurant?, carte, menus?)>
+<!ATTLIST restaurant id_restaurant ID #REQUIRED>
 <!ELEMENT coordonnees (nom, adresse, restaurateur)>
 <!ELEMENT nom (#PCDATA)>
 <!ELEMENT adresse (#PCDATA)>

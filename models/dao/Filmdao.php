@@ -36,7 +36,8 @@ class FilmDao extends ModelDao{
                 
 
                 $films[] = new Film(
-                    (string)$film->titre,
+                    $id = (string)$film->id_film,
+                    $titre = (string)$film->titre,
                     (string)$film->annee,
                     (string)$film->duree,
                     (string)$film->realisateur,
@@ -58,7 +59,36 @@ class FilmDao extends ModelDao{
     }
 
     public static function find($id){
-        return new Film();
+
+        // chager le fichier et faire la recherche nécesssire
+
+        if(file_exists('C:\Apache24\htdocs\xml\storage\cinema.xml')){
+            $xml = simplexml_load_file('C:\Apache24\htdocs\xml\storage\cinema.xml');
+            foreach($xml->film as $film){
+                if($film->id_film == $id){
+                    $notePresse = new NotePresse((String) $film->notePresse->valeur, (String) $film->notePresse->base);
+                    $noteSpectateur = new NotePresse($film->noteSpectateur->valeur, $film->noteSpectateur->base);
+
+                    return new Film(
+                        (string)$film->id_film,
+                        (string)$film->titre,
+                        (string)$film->annee,
+                        (string)$film->duree,
+                        (string)$film->realisateur,
+                        (string)$film->genre,
+                        (string)$film->acteurs,
+                        (string)$film->langue,
+                        (string)$film->synopsis,
+                        $notePresse,
+                        $noteSpectateur
+                    );
+                }
+            }
+        } else {
+            exit('Echec lors de l\'ouverture du fichier test.xml.');
+        }
+
+        // return new Film();
         
     }
 
