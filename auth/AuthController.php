@@ -13,7 +13,7 @@ class AuthController extends Controller{
 
     public function loginProcess() {
     // Vérifier si le formulaire de connexion est soumis
-        $username = $_POST['username'];
+        $username = $_POST['email'];
         $password = $_POST['password'];
         
         // Vérifier les informations d'identification dans la base de données

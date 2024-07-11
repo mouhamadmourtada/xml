@@ -9,6 +9,7 @@ use SimpleXMLElement;
 
 class RestaurantDao extends ModelDao {
     
+    
         
 
         public function __construct() {
@@ -22,8 +23,8 @@ class RestaurantDao extends ModelDao {
 
             // utilise simple_xml_load_file
 
-            if (file_exists('C:\Apache24\htdocs\xml\storage\restaurant.xml')) {
-                $xml = simplexml_load_file('C:\Apache24\htdocs\xml\storage\restaurant.xml');
+            if (file_exists('C:\xampp\htdocs\xml\storage\restaurant.xml')) {
+                $xml = simplexml_load_file('C:\xampp\htdocs\xml\storage\restaurant.xml');
             
                 print_r($xml);
             } else {

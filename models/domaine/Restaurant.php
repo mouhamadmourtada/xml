@@ -36,6 +36,14 @@ class Restaurant extends Model{
         $this->dao = new RestaurantDao();
     }
 
+    public function getCoordonnees(){
+        return $this->coordonnees;
+    }
+
+    public function getDescriptionRestaurant(){
+        return $this->descriptionRestaurant;
+    }
+
 
 
 

@@ -18,7 +18,7 @@ class Routes {
         $this->router = new Router();
 
         $this->router->add('GET', '/xml/film', [FilmController::class, 'index']);
-        $this->router->add('GET', '/xml/film/create', [FilmController::class, 'create']);
+        $this->router->add('GET', '/xml/film/create', [FilmController::class, 'create'],[AuthMiddleware::class]);
         $this->router->add('GET', '/xml/film/{id}', [FilmController::class, 'show']);
         $this->router->add('POST', '/xml/film', [FilmController::class, 'store']);
         $this->router->add('GET', '/xml', [FilmController::class, 'index']);
