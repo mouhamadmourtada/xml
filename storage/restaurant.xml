@@ -214,15 +214,33 @@
     </restaurant>                            
 <restaurant id_restaurant="restaurant_3"><coordonnees><nom>nouveau nom</nom><adresse>12 rue des fleurs</adresse><restaurateur/></coordonnees><descriptionRestaurant><paragraphe><text>
                     Le petit resto est un restaurant familial
-                </text></paragraphe><paragraphe/><paragraphe><image url="http://www.lepetitresto.com/logo.jpg" position="centre"/></paragraphe></descriptionRestaurant><carte><plat type="entree" plat_id="plat_36"><prix montant="5000" devise="XOF"/><descriptionPlat><paragraphe><text>
+                </text></paragraphe><paragraphe><image url="http://www.lepetitresto.com/logo.jpg" position="centre"/></paragraphe></descriptionRestaurant><carte><plat type="entree" plat_id="plat_41"><prix montant="5000" devise="XOF"/><descriptionPlat><paragraphe><text>
                             Salade de tomates
-                        </text></paragraphe></descriptionPlat></plat><plat type="entree" plat_id="plat_37"><prix montant="6000" devise="XOF"/><descriptionPlat><paragraphe><text>
+                        </text></paragraphe></descriptionPlat></plat><plat type="entree" plat_id="plat_42"><prix montant="6000" devise="XOF"/><descriptionPlat><paragraphe><text>
                             Salade de carottes
-                        </text></paragraphe></descriptionPlat></plat><plat type="plat" plat_id="plat_38"><prix montant="10000" devise="XOF"/><descriptionPlat><paragraphe><text>
+                        </text></paragraphe></descriptionPlat></plat><plat type="plat" plat_id="plat_43"><prix montant="10000" devise="XOF"/><descriptionPlat><paragraphe><text>
                             Poulet roti
-                        </text></paragraphe></descriptionPlat></plat><plat type="plat" plat_id="plat_39"><prix montant="12000" devise="XOF"/><descriptionPlat><paragraphe><text>
+                        </text></paragraphe></descriptionPlat></plat><plat type="plat" plat_id="plat_44"><prix montant="12000" devise="XOF"/><descriptionPlat><paragraphe><text>
                             Boeuf bourguignon
-                        </text></paragraphe></descriptionPlat></plat><plat type="dessert" plat_id="plat_40"><prix montant="3000" devise="XOF"/><descriptionPlat><paragraphe><text>
+                        </text></paragraphe></descriptionPlat></plat><plat type="dessert" plat_id="plat_45"><prix montant="3000" devise="XOF"/><descriptionPlat><paragraphe><text>
+                            Salade de fruits
+                        </text></paragraphe></descriptionPlat></plat></carte><menus><menu><titre>Menu du jour</titre><descriptionMenu><paragraphe><text>
+                            Menu complet
+                        </text></paragraphe></descriptionMenu><prix montant="15000" devise="XOF"/><elements><platRef plat_id="plat_1"/><platRef plat_id="plat_3"/><platRef plat_id="plat_5"/></elements></menu><menu><titre>
+                    Menu enfant
+                </titre><descriptionMenu><paragraphe><text>
+                            Menu pour les enfants
+                        </text></paragraphe></descriptionMenu><prix montant="10000" devise="XOF"/><elements><platRef plat_id="plat_1"/><platRef plat_id="plat_5"/></elements></menu></menus></restaurant><restaurant id_restaurant="restaurant_4"><coordonnees><nom>nouveau nom</nom><adresse>12 rue des fleurs</adresse><restaurateur/></coordonnees><descriptionRestaurant><paragraphe><text>
+                    Le petit resto est un restaurant familial
+                </text></paragraphe><paragraphe><image url="http://www.lepetitresto.com/logo.jpg" position="centre"/></paragraphe></descriptionRestaurant><carte><plat type="entree" plat_id="plat_46"><prix montant="5000" devise="XOF"/><descriptionPlat><paragraphe><text>
+                            Salade de tomates
+                        </text></paragraphe></descriptionPlat></plat><plat type="entree" plat_id="plat_47"><prix montant="6000" devise="XOF"/><descriptionPlat><paragraphe><text>
+                            Salade de carottes
+                        </text></paragraphe></descriptionPlat></plat><plat type="plat" plat_id="plat_48"><prix montant="10000" devise="XOF"/><descriptionPlat><paragraphe><text>
+                            Poulet roti
+                        </text></paragraphe></descriptionPlat></plat><plat type="plat" plat_id="plat_49"><prix montant="12000" devise="XOF"/><descriptionPlat><paragraphe><text>
+                            Boeuf bourguignon
+                        </text></paragraphe></descriptionPlat></plat><plat type="dessert" plat_id="plat_50"><prix montant="3000" devise="XOF"/><descriptionPlat><paragraphe><text>
                             Salade de fruits
                         </text></paragraphe></descriptionPlat></plat></carte><menus><menu><titre>Menu du jour</titre><descriptionMenu><paragraphe><text>
                             Menu complet

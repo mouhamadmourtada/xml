@@ -17,13 +17,13 @@ class FilmController extends Controller {
         // echo RestaurantDao::getLastIdPlat();
 
         $restaurant = Restaurant::find("restaurant_3");
-        $restaurant->getCoordonnees()->setNom("nouveau nom");
-        $restaurant->getDescriptionRestaurant()[0]->addElement(["text", "nouveau"]);
-
-        var_dump($restaurant->getDescriptionRestaurant());
-        die();
        
-        $restaurant->update();
+        
+
+        // var_dump($restaurant->getDescriptionRestaurant());
+        // die();
+       
+        $restaurant->save();
        
     }
 

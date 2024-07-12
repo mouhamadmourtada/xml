@@ -28,6 +28,7 @@ class RestaurantDao extends ModelDao {
                 $xml = simplexml_load_file($_SERVER["DOCUMENT_ROOT"].'/xml/storage/restaurant.xml');
                 $restaurants = [];
                 $restaurantDaoservice = new RestaurantDaoService();
+                
                 foreach($xml->children() as $restaurant){
                     $coordonnees = $restaurantDaoservice->getCoordonneesFromXMLCoordonnees($restaurant->coordonnees);
                     

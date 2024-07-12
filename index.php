@@ -3,7 +3,7 @@
 
 
     
-    
+    session_start();
 
     spl_autoload_register(function ($class) {
         // Définissez le chemin de base de vos classes

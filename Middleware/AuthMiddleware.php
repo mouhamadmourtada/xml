@@ -25,7 +25,7 @@ class AuthMiddleware {
 
     private static function redirectToLogin() {
         // Utilisez une redirection plus propre
-        header('Location: http://localhost/archi/site/auth/login');
+        header('Location: http://localhost/xml/auth/login');
         exit;
     }
 }

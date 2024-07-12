@@ -21,6 +21,7 @@ class AuthController extends Controller{
         
         // if ($user && password_verify($password, $user->getPassword())) {
         if(true){
+            
             // Authentification réussie
             // $_SESSION['user_id'] = $user->getId();
             $_SESSION['user_id'] = 1;
