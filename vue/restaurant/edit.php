@@ -9,183 +9,284 @@ edit restaurant
         <a href="http://localhost/xml/auth/logout">logout</a>
     </button>
     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis adipisci est cum a magnam, quo eveniet, vel voluptatem doloremque placeat ullam reprehenderit ab dolorem animi sint? Est ducimus sapiente modi.
-    <div class="container mx-auto mt-10">
-    <form class="bg-white p-8 rounded shadow-md" action="http://localhost/xml/restaurant/store" method="POST">
-        <h1 class="text-2xl font-bold mb-6">Fiche Restaurant</h1>
 
-        <!-- Description du Restaurant -->
-        <div class="mb-6" id="descriptionRestaurant">
-            
+<>
+<div class="container mx-auto mt-10">
+
+<form class="bg-white p-8 rounded shadow-md" action="http://localhost/xml/restaurant/store" method="POST">
+    <h1 class="text-2xl font-bold mb-6">Fiche Restaurant</h1>
+
+    <!-- Coordonnées -->
+    <div class="mb-6">
+        <h2 class="text-xl font-semibold mb-4">Coordonnées</h2>
+        <div class="mb-4">
+            <label class="block text-gray-700">Nom</label>
+            <input type="text" name="nom" class="w-full p-2 border border-gray-300 rounded">
         </div>
+        <div class="mb-4">
+            <label class="block text-gray-700">Adresse</label>
+            <input type="text" name="adresse" class="w-full p-2 border border-gray-300 rounded">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700">Restaurateur</label>
+            <input type="text" name="restaurateur" class="w-full p-2 border border-gray-300 rounded">
+        </div>
+    </div>
+
+    <!-- Description du Restaurant -->
+    <div class="mb-6">
+        <h2 class="text-xl font-semibold mb-4">Description du Restaurant</h2>
+        <div id="descriptionRestaurant">
+            <div class="mb-4">
+                <label class="block text-gray-700">Paragraphe</label>
+                <textarea name="paragraphe[]" class="w-full p-2 border border-gray-300 rounded"></textarea>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Important</label>
+                <input type="text" name="important[]" class="w-full p-2 border border-gray-300 rounded">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Liste</label>
+                <div id="liste">
+                    <input type="text" name="item[]" class="w-full p-2 border border-gray-300 rounded mb-2">
+                </div>
+                <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="editItem()">Modifier un item</button>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700">Image</label>
+                <input type="text" name="image_url[]" placeholder="URL de l'image" class="w-full p-2 border border-gray-300 rounded mb-2">
+                <select name="image_position[]" class="w-full p-2 border border-gray-300 rounded">
+                    <option value="gauche">Gauche</option>
+                    <option value="droite">Droite</option>
+                    <option value="centre">Centre</option>
+                </select>
+            </div>
+        </div>
+        <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="editParagraphe()">Modifier un paragraphe</button>
+    </div>
+
+    <!-- Carte -->
+    <div class="mb-6">
+        <h2 class="text-xl font-semibold mb-4">Carte</h2>
+        <div id="carte">
+            <div class="mb-4 plat">
+                <h3 class="font-medium">Plat</h3>
+                <label class="block text-gray-700">Type</label>
+                <select name="type[]" class="w-full p-2 border border-gray-300 rounded">
+                    <option value="dessert">Dessert</option>
+                    <option value="entree">Entrée</option>
+                    <option value="plat">Plat</option>
+                    <option value="fromage">Fromage</option>
+                </select>
+                <label class="block text-gray-700">Prix</label>
+                <input type="text" name="prix[]" class="w-full p-2 border border-gray-300 rounded">
+                <label class="block text-gray-700">Description du Plat</label>
+                <textarea name="descriptionPlat[]" class="w-full p-2 border border-gray-300 rounded"></textarea>
+                <div class="mb-4" id="descriptionPlat">
+                    <div class="mb-4">
+                        <label class="block text-gray-700">Paragraphe</label>
+                        <textarea name="paragraphePlat[]" class="w-full p-2 border border-gray-300 rounded"></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700">Important</label>
+                        <input type="text" name="importantPlat[]" class="w-full p-2 border border-gray-300 rounded">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700">Liste</label>
+                        <div id="listePlat">
+                            <input type="text" name="itemPlat[]" class="w-full p-2 border border-gray-300 rounded mb-2">
+                        </div>
+                        <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="editItemPlat()">Modifier un item</button>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700">Image</label>
+                        <input type="text" name="image_urlPlat[]" placeholder="URL de l'image" class="w-full p-2 border border-gray-300 rounded mb-2">
+                        <select name="image_positionPlat[]" class="w-full p-2 border border-gray-300 rounded">
+                            <option value="gauche">Gauche</option>
+                            <option value="droite">Droite</option>
+                            <option value="centre">Centre</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="editPlat()">Modifier un plat</button>
+    </div>
+
+    <!-- Menus -->
+    <div class="mb-6">
+        <h2 class="text-xl font-semibold mb-4">Menus</h2>
+        <div id="menus">
+            <div class="mb-4">
+                <label class="block text-gray-700">Titre</label>
+                <input type="text" name="titre[]" class="w-full p-2 border border-gray-300 rounded">
+                <label class="block text-gray-700">Description</label>
+                <textarea name="descriptionMenu[]" class="w-full p-2 border border-gray-300 rounded"></textarea>
+                <label class="block text-gray-700">Prix</label>
+                <input type="text" name="prixMenu[]" class="w-full p-2 border border-gray-300 rounded">
+                <label class="block text-gray-700">Éléments</label>
+                <div id="elements">
+                    <select name="elements[]" class="w-full p-2 border border-gray-300 rounded mb-2">
+                        <!-- Options des plats seront ajoutées ici -->
+                    </select>
+                </div>
+                <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="editElement()">Modifier un élément</button>
+            </div>
+        </div>
+        <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="editMenu()">Modifier un menu</button>
+    </div>
+
+    <button type="submit" class="bg-green-500 text-white px-6 py-2 rounded">Soumettre</button>
+</form>
+</div>
+     <script>
+      
+        function editParagraphe() {
+    const descriptionRestaurant = document.getElementById('descriptionRestaurant');
+    descriptionRestaurant.innerHTML = ''
+    // Sélectionnez l'élément div existant que vous souhaitez modifier
+    const paragrapheDiv = descriptionRestaurant.querySelector('.mb-4');
+
+    // Vérifiez si paragrapheDiv existe déjà
+    if (paragrapheDiv) {
+        // Modifier le contenu de paragrapheDiv
+        paragrapheDiv.innerHTML = `
+            <label class="block text-gray-700">Paragraphe</label>
+            <textarea name="paragraphe[]" class="w-full p-2 border border-gray-300 rounded"></textarea>
+            <label class="block text-gray-700">Important</label>
+            <input type="text" name="important[]" class="w-full p-2 border border-gray-300 rounded">
+            <label class="block text-gray-700">Liste</label>
+            <div id="liste">
+                <input type="text" name="item[]" class="w-full p-2 border border-gray-300 rounded mb-2">
+            </div>
+            <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="editItem()">Modifier un item</button>
+            <label class="block text-gray-700">Image</label>
+            <input type="text" name="image_url[]" placeholder="URL de l'image" class="w-full p-2 border border-gray-300 rounded mb-2">
+            <select name="image_position[]" class="w-full p-2 border border-gray-300 rounded">
+                <option value="gauche">Gauche</option>
+                <option value="droite">Droite</option>
+                <option value="centre">Centre</option>
+            </select>
+        `;}}
+        descriptionRestaurant.appendChild(paragrapheDiv)
+
        
 
+        function editItem() {
+    const liste = document.getElementById('liste');
+    
+    const itemToModify = liste.querySelector('input'); 
+
+    if (itemToModify) {
         
-        <div class="mb-6" id="updateSection">
-            <h2 class="text-xl font-bold mb-4">Mise à jour des Paragraphes</h2>
-            
-            <div id="updateParagrapheDiv">
-                <label class="block text-gray-700">Index du Paragraphe à Mettre à Jour</label>
-                <input type="number" id="updateParagrapheIndex" class="w-full p-2 border border-gray-300 rounded mb-2">
-                <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="updateParagraphe()">Mettre à Jour le Paragraphe</button>
-            </div>
+        itemToModify.type = 'text';
+        itemToModify.name = 'item[]';
+        itemToModify.className = 'w-full p-2 border border-gray-300 rounded mb-2';
+    } else {
+        console.log("Aucun élément trouvé à modifier.");
+    }
+}
 
-            <h2 class="text-xl font-bold mb-4 mt-6">Mise à jour des Images</h2>
-          
-            <div id="updateImageDiv">
-                <label class="block text-gray-700">Index de l'Image à Mettre à Jour</label>
-                <input type="number" id="updateImageIndex" class="w-full p-2 border border-gray-300 rounded mb-2">
-                <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="updateImage()">Mettre à Jour l'Image</button>
-            </div>
 
-            <h2 class="text-xl font-bold mb-4 mt-6">Mise à jour des Items</h2>
+function editPlat() {
+            const carte = document.getElementById('carte');
+            carte.innerHTML = ''; 
+            const platDiv = document.createElement('div');
+            platDiv.className = 'mb-4 plat';
+            platDiv.innerHTML = `
+                <h3 class="font-medium">Plat</h3>
+                <label class="block text-gray-700">Type</label>
+                <select name="type[]" class="w-full p-2 border border-gray-300 rounded">
+                    <option value="dessert">Dessert</option>
+                    <option value="entree">Entrée</option>
+                    <option value="plat">Plat</option>
+                    <option value="fromage">Fromage</option>
+                </select>
+                <label class="block text-gray-700">Prix</label>
+                <input type="text" name="prix[]" class="w-full p-2 border border-gray-300 rounded">
+                <label class="block text-gray-700">Description du Plat</label>
+                <textarea name="descriptionPlat[]" class="w-full p-2 border border-gray-300 rounded"></textarea>
+                   <div class="mb-4" id="descriptionPlat">
+                        <div class="mb-4">
+                            <label class="block text-gray-700">Paragraphe</label>
+                            <textarea name="paragraphePlat[]" class="w-full p-2 border border-gray-300 rounded"></textarea>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700">Important</label>
+                            <input type="text" name="importantPlat[]" class="w-full p-2 border border-gray-300 rounded">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700">Liste</label>
+                            <div id="listePlat">
+                                <input type="text" name="itemPlat[]" class="w-full p-2 border border-gray-300 rounded mb-2">
+                            </div>
+                            <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="editItemPlat()">Modifier un item</button>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700">Image</label>
+                            <input type="text" name="image_urlPlat[]" placeholder="URL de l'image" class="w-full p-2 border border-gray-300 rounded mb-2">
+                            <select name="image_positionPlat[]" class="w-full p-2 border border-gray-300 rounded">
+                                <option value="gauche">Gauche</option>
+                                <option value="droite">Droite</option>
+                                <option value="centre">Centre</option>
+                            </select>
+                        </div>
+                    </div>
+            `;
+            carte.appendChild(platDiv)
+
            
-            <div id="updateItemDiv">
-                <label class="block text-gray-700">Index de l'Item à Mettre à Jour</label>
-                <input type="number" id="updateItemIndex" class="w-full p-2 border border-gray-300 rounded mb-2">
-                <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="updateItem()">Mettre à Jour l'Item</button>
-            </div>
+        }
 
-            <h2 class="text-xl font-bold mb-4 mt-6">Mise à jour des Éléments</h2>
-            
-            <div id="updateElementDiv">
-                <label class="block text-gray-700">Index de l'Élément à Mettre à Jour</label>
-                <input type="number" id="updateElementIndex" class="w-full p-2 border border-gray-300 rounded mb-2">
-                <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="updateElement()">Mettre à Jour l'Élément</button>
-            </div>
+        function editElement() {
+    const elements = document.getElementById('elements');
+    elements.innerHTML = ''; 
 
-            <h2 class="text-xl font-bold mb-4 mt-6">Mise à jour des Menus</h2>
-            
-            <div id="updateMenuDiv">
-                <label class="block text-gray-700">Index du Menu à Mettre à Jour</label>
-                <input type="number" id="updateMenuIndex" class="w-full p-2 border border-gray-300 rounded mb-2">
-                <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="updateMenu()">Mettre à Jour le Menu</button>
-            </div>
+    const elementSelect = document.createElement('select');
+    elementSelect.name = 'elements[]';
+    elementSelect.className = 'w-full p-2 border border-gray-300 rounded mb-2';
 
-            <h2 class="text-xl font-bold mb-4 mt-6">Mise à jour des Plats</h2>
-            
-            <div id="updatePlatDiv">
-                <label class="block text-gray-700">Index du Plat à Mettre à Jour</label>
-                <input type="number" id="updatePlatIndex" class="w-full p-2 border border-gray-300 rounded mb-2">
-                <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="updatePlat()">Mettre à Jour le Plat</button>
-            </div>
+    const plats = document.querySelectorAll('.plat');
+    plats.forEach((plat, index) => {
+        const option = document.createElement('option');
+        option.value = index + 1;
+        option.textContent = `Plat ${index + 1}`;
+        elementSelect.appendChild(option);
+    });
+
+    elements.appendChild(elementSelect); 
+}
+
+        function editMenu() {
+    const menus = document.getElementById('menus');
+    menus.innerHTML = ''; 
+
+    const menuDiv = document.createElement('div');
+    menuDiv.className = 'mb-4';
+
+    menuDiv.innerHTML = `
+        <label class="block text-gray-700">Titre</label>
+        <input type="text" name="titre[]" class="w-full p-2 border border-gray-300 rounded">
+        <label class="block text-gray-700">Description</label>
+        <textarea name="descriptionMenu[]" class="w-full p-2 border border-gray-300 rounded"></textarea>
+        <label class="block text-gray-700">Prix</label>
+        <input type="text" name="prixMenu[]" class="w-full p-2 border border-gray-300 rounded">
+        <label class="block text-gray-700">Éléments</label>
+        <div id="elements">
+            <select name="elements[]" class="w-full p-2 border border-gray-300 rounded mb-2">
+                <!-- Options des plats seront ajoutées ici -->
+            </select>
         </div>
+        <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="editElement()">Modifier un élément</button>
+    `;
 
-        <button type="submit" class="bg-green-500 text-white px-6 py-2 rounded">Soumettre</button>
-    </form>
-</div>
+    menus.appendChild(menuDiv); // Ajoute le div mis à jour au conteneur 'menus'
+}
 
 
-    <script>
-        function updateParagraphe() {
-            const index = parseInt(document.getElementById('updateParagrapheIndex').value, 10);
-            const descriptionRestaurant = document.getElementById('descriptionRestaurant');
-            const paragrapheDiv = descriptionRestaurant.children[index];
+
 
     
-            if (paragrapheDiv) {
-        
-        const updatedParagraphe = paragrapheDiv.querySelector('textarea[name="paragraphe[]"]').value;
-        const updatedImportant = paragrapheDiv.querySelector('input[name="important[]"]').value;
-        const updatedItem = paragrapheDiv.querySelector('input[name="item[]"]').value;
-        const updatedImageURL = paragrapheDiv.querySelector('input[name="image_url[]"]').value;
-        const updatedImagePosition = paragrapheDiv.querySelector('select[name="image_position[]"]').value;
-       
-        paragrapheDiv.querySelector('textarea[name="paragraphe[]"]').value = updatedParagraphe;
-        paragrapheDiv.querySelector('input[name="important[]"]').value = updatedImportant;
-        paragrapheDiv.querySelector('input[name="item[]"]').value=updatedItem;
-        paragrapheDiv.querySelector('input[name="image_url[]"]').value=updatedImageUR;
-        paragrapheDiv.querySelector('select[name="image_position[]"]').value = updatedImagePosition ;
-        
-        console.log(`Paragraphe ${index + 1} mis à jour`);
-    } else {
-        console.log('Paragraphe non trouvé à cet index');
-    }
-}
-
-
-
-function updateItem() {
-    const index = parseInt(document.getElementById('updateItemIndex').value, 10);
-    const descriptionRestaurant = document.getElementById('descriptionRestaurant');
-    const itemInput = descriptionRestaurant.querySelectorAll('input[name="item[]"]')[index];
-
-    if (itemInput) {
-
-        const updatedItem = itemInput.value;
-
-        itemInput.value = updatedItem;
-
-        console.log(`Item ${index + 1} mis à jour`);
-    } else {
-        console.log('Item non trouvé à cet index');
-    }
-}
-
-
-function updateMenu() {
-    const index = parseInt(document.getElementById('updateMenuIndex').value, 10);
-    const descriptionRestaurant = document.getElementById('descriptionRestaurant');
-    const menuDiv = descriptionRestaurant.querySelectorAll('.menu')[index];
-
-    if (menuDiv) {
-        
-        const updatedMenuName = menuDiv.querySelector('input[name="menu_nom[]"]').value;
-        const updatedMenuDescription = menuDiv.querySelector('textarea[name="menu_description[]"]').value;
-
-        
-        menuDiv.querySelector('input[name="menu_nom[]"]').value = updatedMenuName;
-        menuDiv.querySelector('textarea[name="menu_description[]"]').value = updatedMenuDescription;
-
-        console.log(`Menu ${index + 1} mis à jour`);
-    } else {
-        console.log('Menu non trouvé à cet index');
-    }
-}
-
-function updatePlat() {
-    const index = parseInt(document.getElementById('updatePlatIndex').value, 10);
-    const descriptionRestaurant = document.getElementById('descriptionRestaurant');
-    const platDiv = descriptionRestaurant.querySelectorAll('.plat')[index];
-
-    if (platDiv) {
-        
-        const updatedPlatName = platDiv.querySelector('input[name="plat_nom[]"]').value;
-        const updatedPlatDescription = platDiv.querySelector('textarea[name="plat_description[]"]').value;
-
-        
-        platDiv.querySelector('input[name="plat_nom[]"]').value = updatedPlatName;
-        platDiv.querySelector('textarea[name="plat_description[]"]').value = updatedPlatDescription;
-
-        console.log(`Plat ${index + 1} mis à jour`);
-    } else {
-        console.log('Plat non trouvé à cet index');
-    }
-}
-
-
-
-function updateElement() {
-    const index = parseInt(document.getElementById('updateElementIndex').value, 10);
-    const descriptionRestaurant = document.getElementById('descriptionRestaurant');
-    const elementSelect = descriptionRestaurant.querySelectorAll('select[name="elements[]"]')[index];
-
-    if (elementSelect) {
-        
-        const updatedElement = elementSelect.value;
-
-        
-        elementSelect.value = updatedElement;
-
-        console.log(`Élément ${index + 1} mis à jour`);
-    } else {
-        console.log('Élément non trouvé à cet index');
-    }
-}
-
-
-
-
-    </script>
-
+</script>
 <?php
     require 'vue/layout/footer.php';
