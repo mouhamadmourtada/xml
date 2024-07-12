@@ -34,6 +34,7 @@ class Routes {
         $this->router->add('POST', '/xml/restaurant', [RestaurantController::class, 'store'], [AuthMiddleware::class]);
         $this->router->add('GET', '/xml/restaurant/{id}/edit', [RestaurantController::class, 'edit'], [AuthMiddleware::class]);
         $this->router->add('POST', '/xml/restaurant/{id}/update', [RestaurantController::class, 'update'], [AuthMiddleware::class]);
+
         $this->router->add('GET', '/xml/restaurant/{id}/delete', [RestaurantController::class, 'destroy'], [AuthMiddleware::class]);
         
 

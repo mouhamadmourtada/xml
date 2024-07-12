@@ -46,14 +46,62 @@ class FilmController extends Controller {
     }
 
     public function store() {
+        $titres = $_POST['titre'];
+        $genres = $_POST['genre'];
+        $durees = $_POST['duree'];
+        $realisateurs = $_POST['realisateur'];
+        $acteursList = $_POST['acteur'];
+        $annees = $_POST['annee'];
+        $langues = $_POST['langue'];
+        $synopses = $_POST['synopsis'];
+        $notePresseValeurs = $_POST['notePresseValeur'];
+        $notePresseBases = $_POST['notePresseBase'];
+        $noteSpectateurValeurs = $_POST['noteSpectateurValeur'];
+        $noteSpectateurBases = $_POST['noteSpectateurBase'];
+        $jours = $_POST['jour'];
+        $heures = $_POST['heure'];
 
+        $films = [];
 
-        $film = new Film();
-        $film->setTitre($_POST['titre']);
-        $film->setAnnee($_POST['annee']);
-        $film->setDuree($_POST['duree']);
-        $film->setRealisateur($_POST['realisateur']);
-        $film->setGenre($_POST['genre']);
+        for ($i = 0; $i < count($titres); $i++) {
+            // Récupérer les acteurs pour ce film
+            $acteurs = array_filter($acteursList, function($key) use ($i) {
+                return strpos($key, "[$i]") !== false;
+            }, ARRAY_FILTER_USE_KEY);
+
+            // Récupérer les horaires pour ce film
+            $horaires = [];
+            foreach ($jours as $index => $jour) {
+                if ($index == $i) {
+                    $horaires[] = [
+                        'jour' => $jour,
+                        'heure' => $heures[$index]
+                    ];
+                }
+            }
+
+            // Ajouter le film à la liste
+            $films[] = new Film(
+                //$titres[$i],
+                //$genres[$i],
+                //$durees[$i],
+               // $realisateurs[$i],
+                //$acteurs,
+               // $annees[$i],
+               // $langues[$i],
+               // $synopses[$i],
+               // ['valeur' => $notePresseValeurs[$i], 'base' => $notePresseBases[$i]],
+               // ['valeur' => $noteSpectateurValeurs[$i], 'base' => $noteSpectateurBases[$i]],
+               // $horaires
+            );
+        }
+
+        //$film = new Film();
+        //$film->setTitre($_POST['titre']);
+        //$film->setAnnee($_POST['annee']);
+        //$film->setDuree($_POST['duree']);
+        //:$film->setRealisateur($_POST['realisateur']);
+        //$film->setGenre($_POST['genre']);
         // $film->save();
         $flashes = ['success' => 'Film ajouté avec succès'];
         $this->redirect('film', $flashes);
