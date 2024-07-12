@@ -54,6 +54,8 @@ class RestaurantController extends Controller{
     public function show($params){
 
         $restaurant = Restaurant::find($params['id']);
+        // var_dump($restaurant); die();
+
         return $this->view('restaurant/show', compact('restaurant'));
     }
 

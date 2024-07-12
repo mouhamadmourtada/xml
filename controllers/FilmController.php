@@ -2,12 +2,29 @@
 
 namespace controllers;
 
+use models\dao\FilmDao;
+use Models\Dao\RestaurantDao;
+use Models\Domaine\composants\Horaire;
 use models\domaine\Film;
+use models\domaine\composants\NotePresse;
+use models\domaine\composants\NoteSpectateur;
+use Models\Domaine\Restaurant;
 
 class FilmController extends Controller {
 
     public function test() {
-        echo 'test';
+       
+        // echo RestaurantDao::getLastIdPlat();
+
+        $restaurant = Restaurant::find("restaurant_3");
+        $restaurant->getCoordonnees()->setNom("nouveau nom");
+        $restaurant->getDescriptionRestaurant()[0]->addElement(["text", "nouveau"]);
+
+        var_dump($restaurant->getDescriptionRestaurant());
+        die();
+       
+        $restaurant->update();
+       
     }
 
     public function index() {

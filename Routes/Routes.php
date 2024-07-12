@@ -22,6 +22,11 @@ class Routes {
         $this->router->add('GET', '/xml/film/{id}', [FilmController::class, 'show']);
         $this->router->add('POST', '/xml/film', [FilmController::class, 'store']);
         $this->router->add('GET', '/xml', [FilmController::class, 'index']);
+        $this->router->add('GET', '/xml/film/{id}/edit', [FilmController::class, 'edit']);
+        $this->router->add('POST', '/xml/film/{id}/update', [FilmController::class, 'update']);
+        $this->router->add('GET', '/xml/film/{id}/delete', [FilmController::class, 'destroy']);
+
+        $this->router->add('GET', '/xml/test', [FilmController::class, 'test']);
 
         $this->router->add('GET', '/xml/restaurant', [RestaurantController::class, 'index'], );
         $this->router->add('GET', '/xml/restaurant/create', [RestaurantController::class, 'create'], [AuthMiddleware::class]);

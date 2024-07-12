@@ -4,7 +4,8 @@ namespace models\domaine;
 
 use models\dao\FilmDao;
 use Models\Domaine\composants\notePresse;
-use Models\Domaine\composants\noteSpectateur;
+use Models\Domaine\composants\NoteSpectateur;
+use Models\Domaine\composants\Horaire;
 
 class Film extends Model{
 
@@ -20,18 +21,28 @@ class Film extends Model{
     private NotePresse $notePresse;
     private NoteSpectateur $noteSpectateur;
 
+    /** @var Horaire[] horaires */
     private $horaires;
 
 
     private FilmDao $dao;
     
-    public function __construct($id = null, $titre = null, $annee = null, $duree = null, $realisateur = null, $genre = null){
+    public function __construct($id = null, $titre = null, $annee = null, $duree = null, $realisateur = null, $genre = null, $acteurs = null, $langue = null, $synopsis = null, $notePresse = new NotePresse(), $noteSpectateur = new NoteSpectateur(), $horaires = null){
         parent::__construct($id);
         $this->titre = $titre;
         $this->annee = $annee;
         $this->duree = $duree;
         $this->realisateur = $realisateur;
         $this->genre = $genre;
+        $this->acteurs = $acteurs;
+        $this->langue = $langue;
+        $this->synopsis = $synopsis;
+        $this->noteSpectateur = $noteSpectateur;
+        $this->notePresse = $notePresse;
+        $this->horaires = $horaires;
+
+
+
         $this->dao = new FilmDao();
     }
     
@@ -83,17 +94,6 @@ class Film extends Model{
         $this->acteurs = $acteurs;
     }
 
-    public function addActeurs($acteur){
-        $this->acteurs[] = $acteur;
-    }
-
-    public function removeActeurs($acteur){
-        $key = array_search($acteur, $this->acteurs);
-        if($key !== false){
-            unset($this->acteurs[$key]);
-        }
-    }
-
 
     public function getLangue(){
         return $this->langue;
@@ -133,6 +133,28 @@ class Film extends Model{
 
     public function setHoraires($horaires){
         $this->horaires = $horaires;
+    }
+
+    public function addHoraire($horaire){
+        $this->horaires[] = $horaire;
+    }
+
+    public function removeHoraire($horaire){
+        $key = array_search($horaire, $this->horaires);
+        if($key !== false){
+            unset($this->horaires[$key]);
+        }
+    }
+
+    public function addActeur($acteur){
+        $this->acteurs[] = $acteur;
+    }
+
+    public function removeActeur($acteur){
+        $key = array_search($acteur, $this->acteurs);
+        if($key !== false){
+            unset($this->acteurs[$key]);
+        }
     }
 
 

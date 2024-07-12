@@ -6,7 +6,8 @@
 <!ELEMENT adresse (#PCDATA)>
 <!ELEMENT restaurateur (#PCDATA)>
 <!ELEMENT descriptionRestaurant (paragraphe+)>
-<!ELEMENT paragraphe (#PCDATA | liste | important | image)*>
+<!ELEMENT paragraphe (text | liste | important | image)*>
+<!ELEMENT text (#PCDATA)>
 <!ELEMENT liste (item+)>
 <!ELEMENT item (#PCDATA)>
 <!ELEMENT important (#PCDATA)>

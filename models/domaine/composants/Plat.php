@@ -4,6 +4,8 @@ namespace Models\Domaine\composants;
 
 use Models\Domaine\composants\Paragraphe;
 use Models\Domaine\composants\Prix;
+use Models\Dao\PlatDao;
+use Models\Dao\RestaurantDao;
 
 class Plat {
 
@@ -21,6 +23,10 @@ class Plat {
 
     public function getPrix(){
         return $this->prix;
+    }
+
+    public static function getLastPlatId(){
+        return RestaurantDao::getLastId();
     }
 
     public function getDescriptionPlat(){

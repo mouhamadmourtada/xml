@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>  
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE cinema SYSTEM "cinemaDTD.dtd">
 <cinema>
+
 	<film id_film="film_1">
 		<titre>Les Brigades du Tigre</titre>
 		<duree>120</duree>
@@ -14,25 +15,25 @@
 		</acteurs>
 		<annee>1962</annee>
 		<langue>Français</langue>
-        <notePresse valeur="3" base="5"></notePresse>
-        <noteSpectateur valeur="4" base="5"></noteSpectateur>
+        <notePresse valeur="3" base="5"/>
+        <noteSpectateur valeur="4" base="5"/>
         
 
 		<synopsis>Amélie Poulain, une actrice de la comédie française, est un jour à la recherche d'un nouveau rôle. Mais elle est déjà occupée à la tâche de la part de l'agente du service de police, qui doit déterminer la mort de son client, un homme de lettres.</synopsis>
 		<horaires>
 
             <horaire>
-                <jour valeur="LUNDI" />
+                <jour valeur="LUNDI"/>
                 <heure>14h00</heure>
             </horaire>
 
             <horaire>
-                <jour valeur="LUNDI" />
+                <jour valeur="LUNDI"/>
                 <heure>14h00</heure>
             </horaire>
 
             <horaire>
-                <jour valeur="LUNDI" />
+                <jour valeur="LUNDI"/>
                 <heure>14h00</heure>
             </horaire>
 
@@ -55,22 +56,22 @@
         </acteurs>
         <annee>2015</annee>
         <langue>Anglais</langue>
-        <notePresse valeur="4" base="5"></notePresse>
-        <noteSpectateur valeur="4" base="5"></noteSpectateur>
+        <notePresse valeur="4" base="5"/>
+        <noteSpectateur valeur="4" base="5"/>
         <synopsis>
             Huit chasseurs de primes sont bloqués dans un refuge de montagne par une tempête de neige. Ils réalisent qu'ils ont été piégés par une conspiration et qu'ils devront peut-être se battre pour leur survie.
         </synopsis>
         <horaires>
             <horaire>
-                <jour valeur="LUNDI" />
+                <jour valeur="LUNDI"/>
                 <heure>14h00</heure>
             </horaire>
             <horaire>
-                <jour valeur="MARDI" />
+                <jour valeur="MARDI"/>
                 <heure>14h00</heure>
             </horaire>
             <horaire>
-                <jour valeur="MERCREDI" />
+                <jour valeur="MERCREDI"/>
                 <heure>14h00</heure>
             </horaire>
         </horaires>
@@ -89,22 +90,22 @@
         </acteurs>
         <annee>2012</annee>
         <langue>Anglais</langue>
-        <notePresse valeur="4" base="5"></notePresse>
-        <noteSpectateur valeur="4" base="5"></noteSpectateur>
+        <notePresse valeur="4" base="5"/>
+        <noteSpectateur valeur="4" base="5"/>
         <synopsis>
             Huit chasseurs de primes sont bloqués dans un refuge de montagne par une tempête de neige. Ils réalisent qu'ils ont été piégés par une conspiration et qu'ils devront peut-être se battre pour leur survie.
         </synopsis>
         <horaires>
             <horaire>
-                <jour valeur="LUNDI" />
+                <jour valeur="LUNDI"/>
                 <heure>14h00</heure>
             </horaire>
             <horaire>
-                <jour valeur="MARDI" />
+                <jour valeur="MARDI"/>
                 <heure>14h00</heure>
             </horaire>
             <horaire>
-                <jour valeur="MERCREDI" />
+                <jour valeur="MERCREDI"/>
                 <heure>14h00</heure>
             </horaire>
         </horaires>
@@ -114,7 +115,7 @@
         <titre>Titanic</titre>
         <duree>120</duree>
         <genre>Comédie</genre>
-        <realisateur>Quentin Tarantino</realisateur>
+        <realisateur>pas quantin</realisateur>
         <acteurs>
             <acteur>Samuel L. Jackson</acteur>
             <acteur>Quentin Tarantino</acteur>
@@ -123,22 +124,22 @@
         </acteurs>
         <annee>2012</annee>
         <langue>Anglais</langue>
-        <notePresse valeur="4" base="5"></notePresse>
-        <noteSpectateur valeur="4" base="5"></noteSpectateur>
+        <notePresse valeur="4" base="5"/>
+        <noteSpectateur valeur="4" base="5"/>
         <synopsis>
             Huit chasseurs de primes sont bloqués dans un refuge de montagne par une tempête de neige. Ils réalisent qu'ils ont été piégés par une conspiration et qu'ils devront peut-être se battre pour leur survie.
         </synopsis>
         <horaires>
             <horaire>
-                <jour valeur="LUNDI" />
+                <jour valeur="LUNDI"/>
                 <heure>14h00</heure>
             </horaire>
             <horaire>
-                <jour valeur="MARDI" />
+                <jour valeur="MARDI"/>
                 <heure>14h00</heure>
             </horaire>
             <horaire>
-                <jour valeur="MERCREDI" />
+                <jour valeur="MERCREDI"/>
                 <heure>14h00</heure>
             </horaire>
         </horaires>
@@ -158,22 +159,22 @@
         </acteurs>
         <annee>2012</annee>
         <langue>Anglais</langue>
-        <notePresse valeur="4" base="5"></notePresse>
-        <noteSpectateur valeur="4" base="5"></noteSpectateur>
+        <notePresse valeur="4" base="5"/>
+        <noteSpectateur valeur="4" base="5"/>
         <synopsis>
             Huit chasseurs de primes sont bloqués dans un refuge de montagne par une tempête de neige. Ils réalisent qu'ils ont été piégés par une conspiration et qu'ils devront peut-être se battre pour leur survie.
         </synopsis>
         <horaires>
             <horaire>
-                <jour valeur="LUNDI" />
+                <jour valeur="LUNDI"/>
                 <heure>14h00</heure>
             </horaire>
             <horaire>
-                <jour valeur="MARDI" />
+                <jour valeur="MARDI"/>
                 <heure>14h00</heure>
             </horaire>
             <horaire>
-                <jour valeur="MERCREDI" />
+                <jour valeur="MERCREDI"/>
                 <heure>14h00</heure>
             </horaire>
         </horaires>
@@ -192,22 +193,22 @@
         </acteurs>
         <annee>2012</annee>
         <langue>Anglais</langue>
-        <notePresse valeur="4" base="5"></notePresse>
-        <noteSpectateur valeur="4" base="5"></noteSpectateur>
+        <notePresse valeur="4" base="5"/>
+        <noteSpectateur valeur="4" base="5"/>
         <synopsis>
             Huit chasseurs de primes sont bloqués dans un refuge de montagne par une tempête de neige. Ils réalisent qu'ils ont été piégés par une conspiration et qu'ils devront peut-être se battre pour leur survie.
         </synopsis>
         <horaires>
             <horaire>
-                <jour valeur="LUNDI" />
+                <jour valeur="LUNDI"/>
                 <heure>14h00</heure>
             </horaire>
             <horaire>
-                <jour valeur="MARDI" />
+                <jour valeur="MARDI"/>
                 <heure>14h00</heure>
             </horaire>
             <horaire>
-                <jour valeur="MERCREDI" />
+                <jour valeur="MERCREDI"/>
                 <heure>14h00</heure>
             </horaire>
         </horaires>
@@ -215,5 +216,6 @@
 
 
 
+<film id_film="film_10"><titre>Test</titre><annee>2021</annee><duree>120</duree><realisateur>Moi</realisateur><genre>Action</genre><langue/><synopsis/><notePresse valeur="5" base="10"/><noteSpectateur valeur="5" base="10"/><acteurs><acteur>Moi</acteur><acteur>Toi</acteur><acteur>Lui</acteur></acteurs><horaires><horaire><jour valeur="LUNDI"/><jour valeur="MARDI"/><heure>10h</heure><heure>14h</heure></horaire><horaire><jour valeur="MERCREDI"/><jour valeur="JEUDI"/><heure>12h</heure><heure>16h</heure></horaire></horaires></film>
+<film id_film="film_11"><titre>Test</titre><annee>2021</annee><duree>120</duree><realisateur>Moi</realisateur><genre>Action</genre><langue/><synopsis/><notePresse valeur="5" base="10"/><noteSpectateur valeur="5" base="10"/><acteurs><acteur>Moi</acteur><acteur>Toi</acteur><acteur>Lui</acteur></acteurs><horaires><horaire><jour valeur="LUNDI"/><jour valeur="MARDI"/><heure>10h</heure><heure>14h</heure></horaire><horaire><jour valeur="MERCREDI"/><jour valeur="JEUDI"/><heure>12h</heure><heure>16h</heure></horaire></horaires></film>
 </cinema>
-                
