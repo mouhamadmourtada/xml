@@ -29,6 +29,7 @@ class FilmController extends Controller {
 
     public function index() {
         $films = Film::all();
+       
 
         $this->view('film/index', ['films' => $films]);
     }

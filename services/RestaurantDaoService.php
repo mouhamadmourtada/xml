@@ -48,7 +48,7 @@ class RestaurantDaoService {
         $coordonnees = new Coordonnee(
             $xmlCoordonnees->nom,
             $xmlCoordonnees->adresse,
-            $xmlCoordonnees->restaurteur,
+            $xmlCoordonnees->restaurateur,
         );
         return $coordonnees;
     }

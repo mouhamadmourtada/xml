@@ -4,6 +4,11 @@ namespace controllers;
 
 use controllers\Controller;
 use models\domaine\Restaurant;
+use models\domaine\composants\Coordonnee;
+use models\domaine\composants\Important;
+use models\domaine\composants\Image;
+
+
 
 class RestaurantController extends Controller{
 
@@ -11,7 +16,8 @@ class RestaurantController extends Controller{
 
     public function index(){
         $restaurants = Restaurant::all();
-        return $this->view('restaurant/index', compact('restaurants'));
+        
+        return $this->view('restaurant/index', ['restaurants' => $restaurants] );
     }
 
 
