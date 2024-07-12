@@ -24,8 +24,8 @@ class FilmDao extends ModelDao{
     public static function all(){
         // charger le fichier xml et le rendre 
         
-        if (file_exists('C:\Apache24\htdocs\xml\storage\cinema.xml')) {
-            $xml = simplexml_load_file('C:\Apache24\htdocs\xml\storage\cinema.xml');
+        if (file_exists($_SERVER['DOCUMENT_ROOT'].'\xml\storage\cinema.xml')) {
+            $xml = simplexml_load_file($_SERVER['DOCUMENT_ROOT'].'\xml\storage\cinema.xml');
             
             // il faut extraire les données et construire le tableau d'objet de film
 
@@ -62,8 +62,8 @@ class FilmDao extends ModelDao{
 
         // chager le fichier et faire la recherche nécesssire
 
-        if(file_exists('C:\Apache24\htdocs\xml\storage\cinema.xml')){
-            $xml = simplexml_load_file('C:\Apache24\htdocs\xml\storage\cinema.xml');
+        if(file_exists($_SERVER['DOCUMENT_ROOT'].'\xml\storage\cinema.xml')){
+            $xml = simplexml_load_file($_SERVER['DOCUMENT_ROOT'].'\xml\storage\cinema.xml');
             foreach($xml->film as $film){
                 if($film->id_film == $id){
                     $notePresse = new NotePresse((String) $film->notePresse->valeur, (String) $film->notePresse->base);

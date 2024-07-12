@@ -22,8 +22,8 @@ class RestaurantDao extends ModelDao {
 
             // utilise simple_xml_load_file
 
-            if (file_exists('C:\Apache24\htdocs\xml\storage\restaurant.xml')) {
-                $xml = simplexml_load_file('C:\Apache24\htdocs\xml\storage\restaurant.xml');
+            if (file_exists($_SERVER['DOCUMENT_ROOT'].'\xml\storage\restaurant.xml')) {
+                $xml = simplexml_load_file($_SERVER['DOCUMENT_ROOT'].'\xml\storage\restaurant.xml');
             
                 print_r($xml);
             } else {

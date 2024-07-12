@@ -3,7 +3,9 @@
 namespace controllers;
 
 use models\domaine\Film;
-
+use models\domaine\composants\NotePresse;
+use models\domaine\composants\NoteSpectateur;
+use models\domaine\composants\Horaire;
 class FilmController extends Controller {
 
     public function test() {
@@ -18,8 +20,36 @@ class FilmController extends Controller {
 
     public function show($params) {
         $id = $params['id'];
-        $film = Film::find($id);
-        var_dump($film); die();
+        // $film = Film::find($id);
+        $film = new Film();
+        $film->setTitre("Avengers");
+        $film->setAnnee(2021);
+        $film->setDuree(120);
+        $film->setRealisateur('James Cameron');
+        $film->setSynopsis("Quand un ennemi inattendu fait surface pour menacer la sécurité et l'équilibre mondial, Nick Fury, directeur de l'agence internationale pour le maintien de la paix, connue sous le nom du S.H.I.E.L.D.");
+        $film->setLangue('Francais');
+        $film->setGenre('Action');
+        
+        $notePresse = new NotePresse(5,10);
+        $film->setNotePresse($notePresse);
+        $noteSpectateur = new NoteSpectateur(8,10);
+        $film->setNoteSpectateur($noteSpectateur);
+        
+        $acteurs = ['Omar Van Damme', 'Saliou Niane', 'Robertchev'];
+        $film->setActeurs($acteurs);
+        $horaires = [
+            new Horaire(
+                ['LUNDI', 'MARDI'],
+                ['10h', '14h']
+            ),
+            new Horaire(
+                ['MERCREDI', 'JEUDI'],
+                ['12h', '16h']
+            )
+        ];
+        $film->setHoraires($horaires);
+        $film->save();
+
         $this->view('film/show', ['film' => $film]);
     }
 

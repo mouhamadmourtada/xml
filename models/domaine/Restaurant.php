@@ -14,7 +14,6 @@ class Restaurant extends Model{
 
 
     private $dao = null;
-  
 
     private Coordonnee $coordonnees;
     /** @var Paragraphe[] $descriptionRestaurant */    
@@ -36,6 +35,20 @@ class Restaurant extends Model{
         $this->dao = new RestaurantDao();
     }
 
+    public function getCoordonnees(){
+        return $this->coordonnees;
+    }
+    // Getters plat et menu
+    public function getCartes(){
+        return $this->cartes;
+    }
+    public function getMenus(){
+        return $this->menus;
+    }
+    //getter descriptionrestaurant
+    public function getDescriptionRestaurant(){
+        return $this->descriptionRestaurant;
+    }
 
 
 
