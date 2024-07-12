@@ -27,13 +27,71 @@ class Restaurant extends Model{
     private $menus ;
 
 
-    public function __construct($coordonnees, $descriptionRestaurant, $cartes, $menus){
+    public function __construct($coordonnees, $descriptionRestaurant, $cartes, $menus, $id = null){
+        parent::__construct($id);
         $this->coordonnees = $coordonnees;
         $this->descriptionRestaurant = $descriptionRestaurant;
         $this->cartes = $cartes;
         $this->menus = $menus;
 
         $this->dao = new RestaurantDao();
+    }
+
+    public function getCoordonnees(){
+        return $this->coordonnees;
+    }
+
+    public function getDescriptionRestaurant(){
+        return $this->descriptionRestaurant;
+    }
+
+
+
+    public function getCartes(){
+        return $this->cartes;
+    }
+
+    public function getMenus(){
+        return $this->menus;
+    }
+
+    public function setCoordonnees($coordonnees){
+        $this->coordonnees = $coordonnees;
+    }
+
+    public function setDescriptionRestaurant($descriptionRestaurant){
+        $this->descriptionRestaurant = $descriptionRestaurant;
+    }
+
+    public function setCartes($cartes){
+        $this->cartes = $cartes;
+    }
+
+    public function setMenus($menus){
+        $this->menus = $menus;
+    }
+
+
+    public function addMenu($menu){
+        $this->menus[] = $menu;
+    }
+
+    public function removeMenu($menu){
+        $index = array_search($menu, $this->menus);
+        if($index !== false){
+            unset($this->menus[$index]);
+        }
+    }
+
+    public function addPlat($plat){
+        $this->cartes[] = $plat;
+    }
+
+    public function removePlat($plat){
+        $index = array_search($plat, $this->cartes);
+        if($index !== false){
+            unset($this->cartes[$index]);
+        }
     }
 
 
@@ -45,7 +103,7 @@ class Restaurant extends Model{
     }
 
     public static function find($id){
-
+        return RestaurantDao::find($id);
     }
 
     public function save(){

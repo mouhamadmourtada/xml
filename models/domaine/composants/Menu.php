@@ -18,6 +18,7 @@ class Menu {
         $this->titre = $titre;
         $this->descriptionMenu = $descriptionMenu;
         $this->prix = $prix;
+        
         $this->elements = $elements;
     }
 

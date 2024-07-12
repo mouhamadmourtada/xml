@@ -6,7 +6,7 @@ class NotePresse {
     private $valeur;
     private $base;
 
-    public function __construct($valeur, $base) {
+    public function __construct($valeur = null, $base= null) {
         $this->valeur = $valeur;
         $this->base = $base;
     }
