@@ -24,13 +24,11 @@ class Routes {
         $this->router->add('GET', '/xml', [FilmController::class, 'index']);
 
         $this->router->add('GET', '/xml/restaurant', [RestaurantController::class, 'index'], );
-       // $this->router->add('GET', '/xml/restaurant/create', [RestaurantController::class, 'create'], [AuthMiddleware::class]);
-       $this->router->add('GET', '/xml/restaurant/create', [RestaurantController::class, 'create']);
+        $this->router->add('GET', '/xml/restaurant/create', [RestaurantController::class, 'create'], [AuthMiddleware::class]);
         $this->router->add('GET', '/xml/restaurant/{id}', [RestaurantController::class, 'show']);
         $this->router->add('POST', '/xml/restaurant', [RestaurantController::class, 'store'], [AuthMiddleware::class]);
         $this->router->add('GET', '/xml/restaurant/{id}/edit', [RestaurantController::class, 'edit'], [AuthMiddleware::class]);
-        //$this->router->add('POST', '/xml/restaurant/{id}/update', [RestaurantController::class, 'update'], [AuthMiddleware::class]);
-        $this->router->add('POST', '/xml/restaurant/{id}/update', [RestaurantController::class, 'update']);
+        $this->router->add('POST', '/xml/restaurant/{id}/update', [RestaurantController::class, 'update'], [AuthMiddleware::class]);
 
         $this->router->add('GET', '/xml/restaurant/{id}/delete', [RestaurantController::class, 'destroy'], [AuthMiddleware::class]);
         
