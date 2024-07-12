@@ -10,7 +10,6 @@ use models\domaine\composants\Image;
 
 
 
-use Models\Domaine\composants\Coordonnee;
 use models\domaine\Model;
 use models\domaine\composants\DescriptionRestaurant;
 use models\domaine\composants\Menu;
@@ -40,36 +39,45 @@ class RestaurantController extends Controller{
         $adresse = $_POST['adresse'];
         $restaurateur = $_POST['restaurateur'];
         $coordonnee = new Coordonnee($nom,$adresse,$restaurateur);
+
+        
         // Description du Restaurant
         $descriptionRestaurant = [];
         if (isset($_POST['paragraphe'])) {
             foreach ($_POST['paragraphe'] as $index => $paragraphe) {
-                $descriptionRestaurant[] = [
-                    'paragraphe' => $paragraphe,
-                    'important' => $_POST['important'][$index],
-                    'items' => $_POST['item'][$index] ?? [],
-                    'image_url' => $_POST['image_url'][$index],
-                    'image_position' => $_POST['image_position'][$index],
-                ];
+
+                $descriptionRestaurant[] = new Paragraphe(
+                    [
+                        [ "text", $paragraphe],
+                        ["important", $_POST['important'][$index]],
+                        ["items", $_POST['item'] ?? []],
+                        ["image", new Image($_POST['image_url'][$index], $_POST['image_position'][$index])]
+                    ]
+                );
+                
             }
         }
 
+
+
         // Carte
         $carte = [];
-        if (isset($_POST['type'])) {
-            foreach ($_POST['type'] as $index => $type) {
-                $carte[] = [
-                    'type' => $type,
-                    'prix' => $_POST['prix'][$index],
-                    'descriptionPlat' => $_POST['descriptionPlat'][$index],
-                    'paragraphePlat' => $_POST['paragraphePlat'][$index],
-                    'importantPlat' => $_POST['importantPlat'][$index],
-                    'itemsPlat' => $_POST['itemPlat'][$index] ?? [],
-                    'image_urlPlat' => $_POST['image_urlPlat'][$index],
-                    'image_positionPlat' => $_POST['image_positionPlat'][$index],
-                ];
-            }
+        var_dump($_POST['type']);
+        die();
+        // if (isset($_POST['type'])) {
+        foreach ($_POST['type'] as $index => $type) {
+            $carte[] = [
+                'type' => $type,
+                'prix' => $_POST['prix'][$index],
+                'descriptionPlat' => $_POST['descriptionPlat'][$index],
+                'paragraphePlat' => $_POST['paragraphePlat'][$index],
+                'importantPlat' => $_POST['importantPlat'][$index],
+                'itemsPlat' => $_POST['itemPlat'][$index] ?? [],
+                'image_urlPlat' => $_POST['image_urlPlat'][$index],
+                'image_positionPlat' => $_POST['image_positionPlat'][$index],
+            ];
         }
+        // }
         // Menus
         $menus = [];
         if (isset($_POST['titre'])) {
@@ -92,8 +100,10 @@ class RestaurantController extends Controller{
         return $this->redirect('restaurant');
     }
 
-    public function edit(){
-        $restaurant = Restaurant::find($_GET['id']);
+
+    public function edit($params){
+        $id = $params["id"];
+        $restaurant = Restaurant::find($id);
         return $this->view('restaurant/edit', compact('restaurant'));
     }
 

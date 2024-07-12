@@ -57,10 +57,8 @@ class FilmDao extends ModelDao{
                 }
             }
 
-            print_r($xml->asXML());
             $xml->asXML($_SERVER["DOCUMENT_ROOT"].'/xml/storage/cinema.xml');
             // il faut le 
-            return "hello";
         } else {
             exit('Echec lors de l\'ouverture du fichier cinema.xml.');
 

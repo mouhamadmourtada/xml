@@ -59,7 +59,6 @@ require 'vue/layout/head.php';
                     </select>
                 </div>
             </div>
-            <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="addParagraphe()">Ajouter un paragraphe</button>
         </div>
 
         <!-- Carte -->
@@ -93,7 +92,6 @@ require 'vue/layout/head.php';
                             <div id="listePlat">
                                 <input type="text" name="itemPlat[]" class="w-full p-2 border border-gray-300 rounded mb-2">
                             </div>
-                            <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="addItemPlat()">Ajouter un item</button>
                         </div>
                         <div class="mb-4">
                             <label class="block text-gray-700">Image</label>
@@ -130,37 +128,19 @@ require 'vue/layout/head.php';
                     <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="addElement()">Ajouter un élément</button>
                 </div>
             </div>
-            <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="addMenu()">Ajouter un menu</button>
         </div>
 
         <button type="submit" class="bg-green-500 text-white px-6 py-2 rounded">Soumettre</button>
     </form>
 </div>
     <script>
-        function addParagraphe() {
-            const descriptionRestaurant = document.getElementById('descriptionRestaurant');
-            const paragrapheDiv = document.createElement('div');
-            paragrapheDiv.className = 'mb-4';
-            paragrapheDiv.innerHTML = `
-                <label class="block text-gray-700">Paragraphe</label>
-                <textarea name="paragraphe[]" class="w-full p-2 border border-gray-300 rounded"></textarea>
-                <label class="block text-gray-700">Important</label>
-                <input type="text" name="important[]" class="w-full p-2 border border-gray-300 rounded">
-                <label class="block text-gray-700">Liste</label>
-                <div id="liste">
-                    <input type="text" name="item[]" class="w-full p-2 border border-gray-300 rounded mb-2">
-                </div>
-                <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="addItem()">Ajouter un item</button>
-                <label class="block text-gray-700">Image</label>
-                <input type="text" name="image_url[]" placeholder="URL de l'image" class="w-full p-2 border border-gray-300 rounded mb-2">
-                <select name="image_position[]" class="w-full p-2 border border-gray-300 rounded">
-                    <option value="gauche">Gauche</option>
-                    <option value="droite">Droite</option>
-                    <option value="centre">Centre</option>
-                </select>
-            `;
-            descriptionRestaurant.appendChild(paragrapheDiv);
+        let paragrapheIndex = 0;
+
+        const incrementParagrapheIndex = () =>{
+            paragrapheIndex++;
         }
+
+      
 
         function addItem() {
             const liste = document.getElementById('liste');
@@ -244,27 +224,7 @@ require 'vue/layout/head.php';
             elements.appendChild(elementSelect);
         }
 
-        function addMenu() {
-            const menus = document.getElementById('menus');
-            const menuDiv = document.createElement('div');
-            menuDiv.className = 'mb-4';
-            menuDiv.innerHTML = `
-                <label class="block text-gray-700">Titre</label>
-                <input type="text" name="titre[]" class="w-full p-2 border border-gray-300 rounded">
-                <label class="block text-gray-700">Description</label>
-                <textarea name="descriptionMenu[]" class="w-full p-2 border border-gray-300 rounded"></textarea>
-                <label class="block text-gray-700">Prix</label>
-                <input type="text" name="prixMenu[]" class="w-full p-2 border border-gray-300 rounded">
-                <label class="block text-gray-700">Éléments</label>
-                <div id="elements">
-                    <select name="elements[]" class="w-full p-2 border border-gray-300 rounded mb-2">
-                        <!-- Options des plats seront ajoutées ici -->
-                    </select>
-                </div>
-                <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="addElement()">Ajouter un élément</button>
-            `;
-            menus.appendChild(menuDiv);
-        }
+        
     </script>
 </body>
 </html>

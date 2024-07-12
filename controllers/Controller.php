@@ -11,7 +11,6 @@ abstract class Controller {
     }
 
     protected function redirect($route, $flashes = []) {
-        var_dump($_COOKIE);
         foreach ($flashes as $type => $message) {
             setcookie('flash[type]', $type, time() + 5, '/');
             setcookie('flash[message]', $message, time() + 5, '/');
