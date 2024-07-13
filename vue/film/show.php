@@ -3,57 +3,86 @@
 require 'vue/layout/head.php';
 ?>  
 
-show
 
 <!-- faire detail film fais un effort dans la vue, utilise tailwind -->
 
-<div class="container mx-auto mt-10">
+<div class="container mx-auto mt-6">
+    <span class="text-2xl px-5 py-2 font-bold underline">Details du film</span>
     <div class="flex justify-around flex-wrap">
         <div class="mb-4 w-96">
             <label for="titre" class="block text-gray-700 text-sm font-bold mb-2">Titre</label>
-            <input type="text" name="titre" id="titre" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="<?= $film->getTitre() ?>" readonly>
+            <span class="capitalize font-semibold text-blue-600 italic"><?php echo  $film->getTitre(); ?></span>
+
         </div>
         <div class="mb-4 w-96">
             <label for="annee" class="block text-gray-700 text-sm font-bold mb-2">Annee</label>
-            <input type="text" name="annee" id="annee" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="<?= $film->getAnnee() ?>" readonly>
+            <span class="capitalize font-semibold text-blue-600 italic"><?php echo  $film->getAnnee(); ?></span>
+
         </div>
         <div class="mb-4 w-96">
             <label for="duree" class="block text-gray-700 text-sm font-bold mb-2">Duree</label>
-            <input type="text" name="duree" id="duree" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="<?= $film->getDuree() ?>" readonly>
+            <span class="capitalize font-semibold text-blue-600 italic"><?php echo  $film->getDuree(); ?></span>
+
         </div>
         <div class="mb-4 w-96">
             <label for="realisateur" class="block text-gray-700 text-sm font-bold mb-2">Realisateur</label>
-            <input type="text" name="realisateur" id="realisateur" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="<?= $film->getRealisateur() ?>" readonly>
+            <span class="capitalize font-semibold text-blue-600 italic"><?php echo  $film->getRealisateur(); ?></span>
+
         </div>
         <div class="mb-4 w-96">
             <label for="genre" class="block text-gray-700 text-sm font-bold mb-2">Genre</label>
-            <input type="text" name="genre" id="genre" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="<?= $film->getGenre() ?>" readonly>
+            <span class="capitalize font-semibold text-blue-600 italic"><?php echo  $film->getGenre(); ?></span>
+
         </div>
         <div class="mb-4 w-96">
             <label for="acteurs" class="block text-gray-700 text-sm font-bold mb-2">Acteurs</label>
-            <input type="text" name="acteurs" id="acteurs" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="<?= $film->getActeurs() ?>" readonly>
+            <!-- Acteurs est un tableau itere dessu pour sortir les acteurs correspondants -->
+            <span class="capitalize font-semibold text-blue-600 italic">
+            <?php foreach($film->getActeurs() as $acteur): ?>
+                <?=$acteur.","; ?>
+            <?php endforeach; ?>
+            </span>
+
         </div>
         <div class="mb-4 w-96">
             <label for="langue" class="block text-gray-700 text-sm font-bold mb-2">Langue</label>
-            <input type="text" name="langue" id="langue" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="<?= $film->getLangue() ?>" readonly>
+            <span class="capitalize font-semibold text-blue-600 italic"><?php echo  $film->getLangue(); ?></span>
+
         </div>
         <div class="mb-4 w-96">
             <label for="synopsis" class="block text-gray-700 text-sm font-bold mb-2">Synopsis</label>
-            <input type="text" name="synopsis" id="synopsis" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="<?= $film->getSynopsis() ?>" readonly>
+            <span class="capitalize font-semibold text-blue-600 italic"><?php echo  $film->getSynopsis(); ?></span>
+
         </div>
 
         <div class="mb-4 w-96">
             <label for="notePresse" class="block text-gray-700 text-sm font-bold mb-2">Note Presse</label>
-            <input type="text" name="notePresse" id="notePresse" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="<?= $film->getNotePresse()->getValeur() ?>" readonly>
+            <span class="capitalize font-semibold text-blue-600 italic"><?=$film->getNotePresse()->getValeur()." / ". $film->getNotePresse()->getBase(); ?></span>
+
         </div>
         <div class="mb-4 w-96">
             <label for="noteSpectateur" class="block text-gray-700 text-sm font-bold mb-2">Note Spectateur</label>
-            <input type="text" name="noteSpectateur" id="noteSpectateur" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="<?= $film->getNoteSpectateur()->getValeur() ?>" readonly>
+            <span class="capitalize font-semibold text-blue-600 italic"><?=$film->getNoteSpectateur()->getValeur()." / ". $film->getNoteSpectateur()->getBase(); ?></span>
+
         </div>
 
         <div class="mb-4 w-96">
             <label for="horaires" class="block text-gray-700 text-sm font-bold mb-2">Horaires</label>
-            <input type="text" name="horaires" id="horaires" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="<?= $film->getHoraires() ?>" readonly>
+            <!-- GetHoraire est un tableau contenant les Jours qui sont aussi un tableau itere dessu pour sortir les jours et les heures correspondantes -->
+            <?php foreach($film->getHoraires() as $horaire): ?>
+                <span class="capitalize font-semibold text-blue-600 italic"> 
+                    <?php foreach($horaire->getJours() as $jour): ?>
+                        <?=$jour."-"; ?>
+                    <?php endforeach; ?>
+                    <?php foreach($horaire->getHeures() as $heure): ?>
+                        <?=":".$heure.","; ?>
+                    <?php endforeach; ?>
+                </span>
+            <?php endforeach; ?>
+               
+            
+           
+
         </div>
     </div>
 </div>

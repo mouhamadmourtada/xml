@@ -6,7 +6,7 @@ class Image{
     private $url;
     private $position;
 
-
+    
     public function __construct($url, $position) {
         $this->url = $url;
         $this->position = $position;

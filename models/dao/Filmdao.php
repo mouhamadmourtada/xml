@@ -94,7 +94,7 @@ class FilmDao extends ModelDao{
             $filmXML = $xml->xpath("//film[@id_film='$id']")[0];
             $dom = dom_import_simplexml($filmXML);
             $dom->parentNode->removeChild($dom);
-            $xml->asXML($_SERVER["DOCUMENT_ROOT"].'/xml/storage/cinema2.xml');
+            $xml->asXML($_SERVER["DOCUMENT_ROOT"].'/xml/storage/cinema.xml');
         } else {
             exit('Echec lors de l\'ouverture du fichier cinema.xml.');
         }
