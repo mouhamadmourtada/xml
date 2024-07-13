@@ -19,7 +19,10 @@
     <div class="p-4 mt-10 w-full">
        <div class="flex items-center justify-between mb-10 ">
            <h2 class="text-2xl font-bold" >Nos Restaurants</h2>
-           <button class="px-4 py-2 bg-black text-white rounded-md"> <a href="http://localhost/xml/restaurant/create"> Ajouter un restaurant</a> </button>
+           <div>
+               <button class="px-4 py-2 bg-black text-white rounded-md"> <a href="http://localhost/xml/film"> Liste film</a> </button>
+               <button class="px-4 py-2 bg-black text-white rounded-md"> <a href="http://localhost/xml/restaurant/create"> Ajouter un restaurant</a> </button>
+           </div>
 
        </div>
        <div class="flex flex-wrap items-center justify-center bg-white rounded-xl mt-5 px-2 py-8 gap-6">

@@ -14,7 +14,6 @@ class Restaurant extends Model{
 
 
     private $dao = null;
-  
 
     private Coordonnee $coordonnees;
     /** @var Paragraphe[] $descriptionRestaurant */    

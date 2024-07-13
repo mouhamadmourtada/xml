@@ -117,7 +117,8 @@ class FilmController extends Controller {
         $this->view('film/edit', ['film' => $film]);
     }
 
-    public function update($id) {
+    public function update($params) {
+        $id = $params['id'];
         $film = Film::find($id);
         $film->setTitre($_POST['titre']);
         $film->setAnnee($_POST['annee']);
@@ -128,7 +129,8 @@ class FilmController extends Controller {
         $this->redirect('film');
     }
 
-    public function destroy($id) {
+    public function destroy($params) {
+        $id = $params['id'];
         $film = Film::find($id);
         $film->delete();
         $this->redirect('film');
