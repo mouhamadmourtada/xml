@@ -44,7 +44,7 @@ require 'vue/layout/head.php';
                             }
                         ?>
                             <!-- Utilise la classe Tailwind déterminée pour ajuster la position de l'image -->
-                            <img src="<?php echo $element[1]->getUrl(); ?>" alt="<?php echo $position; ?>" class="w-1/3 h-[10rem] border-b-3 border-blue-700 rounded-lg shadow <?php echo $tailwindClass; ?>">
+                            <img src="https://picsum.photos/200/300" alt="<?php echo $position; ?>" class="w-1/3 h-[10rem] border-b-3 border-blue-700 rounded-lg shadow <?php echo $tailwindClass; ?>">
                             <!-- la position est soit "gauche","droite","centre" ajuste le style tailwind en consequence pour placer l'image utilise self-start, self-center ou self-end suivant les valeurs-->
 
 
@@ -54,48 +54,57 @@ require 'vue/layout/head.php';
             <?php endforeach; ?>
         </div>
     </div>
-    
+    <!-- cartes -->
+     
     <div class="mb-4 flex flex-col gap-1 w-full">
         <label for="titre" class="block text-blue-700 text-2xl font-bold mb-1">Cartes</label>
-        <?php foreach ($restaurant->getCartes() as $carte) : ?>
-            <div class="flex flex-col gap-1 border-x-2 rounded-xl px-4 shadow">
-                <label for="titre" class="block text-gray-700 text-xl font-bold mb-1"><?php $carte->getType(); ?></label>
-                <?php foreach ($carte->getDescriptionPlat()->getContent() as $element) : ?>
-                    <?php if ($element[0] == "texte") : ?>
-                        <span class="text-gray-800"><?php echo $element[1]; ?></span>
-                    <?php elseif ($element[0] == "important") : ?>
-                        <span class="text-red-800 font-bold">Important! <?php echo $element[1]; ?></span>
-                    <?php elseif ($element[0] == "liste") : ?>
-                        <ul class="list-disc list-inside">
-                            <?php foreach ($element[1] as $liste) : ?>
-                                <li><?php echo $liste; ?></li>
-                            <?php endforeach; ?>
-                        </ul>
-                    <?php elseif ($element[0] == "image") :
-                        // Détermine la classe Tailwind en fonction de la position
-                        $position = $element[1]->getPosition();
-                        $tailwindClass = '';
-
-                        if ($position == 'gauche') {
-                            $tailwindClass = 'self-start';
-                        } elseif ($position == 'droite') {
-                            $tailwindClass = 'self-end';
-                        } elseif ($position == 'centre') {
-                            $tailwindClass = 'self-center';
-                        }
-                    ?>
-                        <!-- Utilise la classe Tailwind déterminée pour ajuster la position de l'image -->
-                        <img src="<?php echo $element[1]->getUrl(); ?>" alt="<?php echo $position; ?>" class="w-1/3 h-[10rem] border-b-3 border-blue-700 rounded-lg shadow <?php echo $tailwindClass; ?>">
-                        <!-- mets le prix sachant -->
+        <div class="flex flex-wrap justify-around">
+            <?php foreach ($restaurant->getCartes() as $carte) : ?>
+                <div class="flex flex-col gap-1 border-x-2 rounded-xl px-4 shadow my-2">
+                    <label for="titre" class="block text-gray-700 text-xl font-bold mb-1"><?php echo $carte->getType(); ?></label>
+                    <?php foreach ($carte->getDescriptionPlat()->getContent() as $element) : ?>
+                        <?php if ($element[0] == "texte") : ?>
+                            <span class="text-gray-800"><?php echo $element[1]; ?></span>
+                        <?php elseif ($element[0] == "important") : ?>
+                            <span class="text-red-800 font-bold">Important! <?php echo $element[1]; ?></span>
+                        <?php elseif ($element[0] == "liste") : ?>
+                            <ul class="list-disc list-inside">
+                                <?php foreach ($element[1] as $liste) : ?>
+                                    <li><?php echo $liste; ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        <?php elseif ($element[0] == "image") :
+                            // Détermine la classe Tailwind en fonction de la position
+                            $position = $element[1]->getPosition();
+                            $tailwindClass = '';
+    
+                            if ($position == 'gauche') {
+                                $tailwindClass = 'self-start';
+                            } elseif ($position == 'droite') {
+                                $tailwindClass = 'self-end';
+                            } elseif ($position == 'centre') {
+                                $tailwindClass = 'self-center';
+                            }
+                        ?>
+                            <!-- Utilise la classe Tailwind déterminée pour ajuster la position de l'image -->
+                            <img src="<?php echo $element[1]->getUrl(); ?>" alt="<?php echo $position; ?>" class="w-1/3 h-[10rem] border-b-3 border-blue-700 rounded-lg shadow <?php echo $tailwindClass; ?>">
+                            <!-- mets le prix sachant -->
+                            <span class="text-gray-800 font-bold">Prix: <?php echo $carte->getPrix()->getMontant() . ' ' . $carte->getPrix()->getDevise(); ?></span>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                    <div>
                         <span class="text-gray-800 font-bold">Prix: <?php echo $carte->getPrix()->getMontant() . ' ' . $carte->getPrix()->getDevise(); ?></span>
-                    <?php endif; ?>
-                <?php endforeach; ?>
+                    </div>
+                </div>
             <?php endforeach; ?>
 
-            </div>
+        </div>
+    </div>
+
                        
-        <div class="mb-4 flex flex-col gap-1 w-full">
-            <label for="titre" class="block text-blue-700 text-2xl font-bold mb-1">Menus</label>
+    <div class="mb-4 flex flex-col gap-1 w-full">
+        <label for="titre" class="block text-blue-700 text-2xl font-bold mb-1">Menus</label>
+        <div class="flex flex-wrap gap-5">
             <?php foreach ($restaurant->getMenus() as $menu) : ?>
                 <div class="flex flex-col gap-1 border-x-2 rounded-xl px-4 shadow">
                     <label for="titre" class="block text-gray-700 text-xl font-bold mb-1"><?php echo $menu->getTitre(); ?></label>
@@ -116,7 +125,7 @@ require 'vue/layout/head.php';
                                     // Détermine la classe Tailwind en fonction de la position
                                     $position = $element[1]->getPosition();
                                     $tailwindClass = '';
-
+    
                                     if ($position == 'gauche') {
                                         $tailwindClass = 'self-start';
                                     } elseif ($position == 'droite') {
@@ -132,13 +141,17 @@ require 'vue/layout/head.php';
                                     <span class="text-gray-800 font-bold">Prix: <?php echo $menu->getPrix()->getMontant() . ' ' . $menu->getPrix()->getDevise(); ?></span>
                                 <?php endif; ?>
                             <?php endforeach; ?>
-                            </div>
-                            <?php endforeach; ?>
-                        <?php endforeach; ?>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            <?php endforeach; ?>
 
-        
         </div>
 
+    
+    </div>
+
+</div>
 
 
     <?php
